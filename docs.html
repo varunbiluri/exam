@@ -1,0 +1,865 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>AutoProctor API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="https://cdn.autoproctor.co/static/css/slate/screen-f67b6f2d.css" rel="stylesheet" media="screen" />
+    <link href="https://cdn.autoproctor.co/static/css/slate/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="https://cdn.autoproctor.co/static/js/slate/all-a9fde460.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;javascript&quot;]">
+    <a href="docs.html#" id="nav-button">
+      <span>
+        NAV
+        <img src="https://cdn.autoproctor.co/static/img/slate/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="https://cdn.autoproctor.co/static/img/slate/logo-57f430ec.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="docs.html#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="docs.html#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="docs.html#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="docs.html#key-pair" class="toc-h2 toc-link" data-title="Key Pair">Key Pair</a>
+                  </li>
+                  <li>
+                    <a href="docs.html#hmac" class="toc-h2 toc-link" data-title="HMAC">HMAC</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="docs.html#initialization" class="toc-h1 toc-link" data-title="Initialization">Initialization</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="docs.html#test-attempt-id" class="toc-h2 toc-link" data-title="Test Attempt ID">Test Attempt ID</a>
+                  </li>
+                  <li>
+                    <a href="docs.html#including-js-library" class="toc-h2 toc-link" data-title="Including JS Library">Including JS Library</a>
+                  </li>
+                  <li>
+                    <a href="docs.html#apoptions" class="toc-h2 toc-link" data-title="apOptions">apOptions</a>
+                  </li>
+                  <li>
+                    <a href="docs.html#trackingoptions" class="toc-h2 toc-link" data-title="trackingOptions">trackingOptions</a>
+                  </li>
+                  <li>
+                    <a href="docs.html#additional-tracking-options" class="toc-h2 toc-link" data-title="Additional Tracking Options">Additional Tracking Options</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="docs.html#results" class="toc-h1 toc-link" data-title="Results">Results</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="docs.html#get-attempt-result" class="toc-h2 toc-link" data-title="Get Attempt Result">Get Attempt Result</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="docs.html#customising-sdk-behaviour" class="toc-h1 toc-link" data-title="Customising SDK Behaviour">Customising SDK Behaviour</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="docs.html#introduction-2" class="toc-h2 toc-link" data-title="Introduction">Introduction</a>
+                  </li>
+                  <li>
+                    <a href="docs.html#event-types" class="toc-h2 toc-link" data-title="Event Types">Event Types</a>
+                  </li>
+                  <li>
+                    <a href="docs.html#event-codes" class="toc-h2 toc-link" data-title="Event Codes">Event Codes</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href="register/index.html">Sign Up for a Developer Key</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the AutoProctor SDK! AutoProctor is an automated tool which ensures that users do not cheat while taking online exams. It tracks their environment and actions using data from sources like their mic and camera. It monitors these data and detects anomalous events.</p>
+
+<p>With our JavaScript SDK, you can enable AutoProctor on your own site. You can view code examples in the dark area to the right.</p>
+<h1 id='authentication'>Authentication</h1><h2 id='key-pair'>Key Pair</h2>
+<p>AutoProctor uses a pair of API keys to authorize requests. There is a public <code>CLIENT_ID</code> key and a secret <code>CLIENT_SECRET</code> key. You can get your key pair by registering on our <a href="register/index.html">developer portal</a>.</p>
+<h2 id='hmac'>HMAC</h2>
+<p>AutoProctor uses <a href="https://en.wikipedia.org/wiki/HMAC">HMAC</a> with SHA256 for Authentication. Your <code>CLIENT_SECRET</code> is the key for HMAC, and the relevant parameter is the message. Also, every request must carry your <code>CLIENT_ID</code>. Therefore, every request will carry the <code>CLIENT_ID</code>, the message and the HMAC of the message.</p>
+
+<p>For instance, if you want to check that your key pair is valid, you may make a request to <code>https://autoproctor.co/api/validate/?client_id=&lt;client_id&gt;&client_secret=&lt;client_secret&gt;</code> as shown in the code. If you receive a response with the same message as in the query parameter, it means that your key pair is valid.</p>
+
+        <aside class="notice">
+In the code here, we are computing the HMAC within vanilla Javascript only for demonstration purposes. On Production, the HMAC must come from your backend so that your <code>CLIENT_SECRET</code> isn't exposed.
+</aside>
+
+<blockquote>
+<p>To verify if your key pair is valid</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="kd">const</span> <span class="nx">CLIENT_ID</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hdy13o87</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CLIENT_SECRET</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Jbso5da3H86m</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hello</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">hmacMessage</span> <span class="o">=</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">HmacSHA256</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span> <span class="nx">CLIENT_SECRET</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Hex</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">searchParams</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URLSearchParams</span><span class="p">({</span>
+  <span class="dl">"</span><span class="s2">client_id</span><span class="dl">"</span><span class="p">:</span> <span class="nx">PUBLIC_KEY</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="nx">message</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">hmac_message</span><span class="dl">"</span><span class="p">:</span> <span class="nx">hmacMessage</span>
+<span class="p">});</span>
+
+<span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://autoproctor.co/api/validate/</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">url</span><span class="p">.</span><span class="nx">search</span> <span class="o">=</span> <span class="nx">searchParams</span><span class="p">;</span>
+
+<span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace CLIENT_ID and CLIENT_SECRET with your values</p>
+</blockquote>
+<h1 id='initialization'>Initialization</h1><h2 id='test-attempt-id'>Test Attempt ID</h2>
+<p>AutoProctor doesn&#39;t need details of your users, or the test they attempted, and so on. It identifies each test attempt by a <code>testAttemptId</code>. This is a unique ID that your own platform generates. For example, if User 4 attempted Quiz 3 twice, your platform must be able to generate two <code>testAttemptId</code>s. It is this <code>testAttemptId</code> that you will use to identify sessions on AutoProctor.</p>
+<h2 id='including-js-library'>Including JS Library</h2>
+<p>On the webpage where you want to enable AutoProctor, you include our JS library and initialise it as shown in the code. The last part of the code must load after the DOM has loaded. So, wait for the <code>window.onload</code> event. <code>apOptions</code> is a dictionary object with the following mandatory keys:</p>
+
+<blockquote>
+<p>To initialize, first include these two JS files in your <code>&lt;head&gt;</code> tag</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">'</span><span class="s1">https://ap-statics.s3.ap-south-1.amazonaws.com/autoproctor.2.5.min.js</span><span class="dl">'</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="kd">const</span> <span class="nx">CLIENT_ID</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hdy13o87</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CLIENT_SECRET</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Jbso5da3H86m</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">testAttemptId</span> <span class="o">=</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">lib</span><span class="p">.</span><span class="nx">WordArray</span><span class="p">.</span><span class="nx">random</span><span class="p">(</span><span class="mi">8</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Hex</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">hashedTestAttemptId</span> <span class="o">=</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">HmacSHA256</span><span class="p">(</span><span class="nx">testAttemptId</span><span class="p">,</span> <span class="nx">CLIENT_SECRET</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Hex</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">trackingOptions</span> <span class="o">=</span> <span class="p">{</span><span class="dl">"</span><span class="s2">audio</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="dl">"</span><span class="s2">numFaces</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">apOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">'</span><span class="s1">clientId</span><span class="dl">'</span><span class="p">:</span> <span class="nx">CLIENT_ID</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">testAttemptId</span><span class="dl">'</span><span class="p">:</span> <span class="nx">testAttemptId</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">hashedTestAttemptId</span><span class="dl">'</span><span class="p">:</span> <span class="nx">hashedTestAttemptId</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">trackingOptions</span><span class="dl">'</span><span class="p">:</span> <span class="nx">trackingOptions</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Then, within <code>$(document).ready</code> or <code>window.onload</code>, have the following line</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">autoProctorInstance</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">initAutoProctor</span><span class="p">(</span><span class="nx">apOptions</span><span class="p">);</span>
+</code></pre></div><h2 id='apoptions'>apOptions</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Properties</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>clientId</td>
+<td>string, required</td>
+<td>Your <code>CLIENT_ID</code> that identifies you as the sender of the data</td>
+</tr>
+<tr>
+<td>testAttemptId</td>
+<td>string, required</td>
+<td>The unique identifier for the test attempt</td>
+</tr>
+<tr>
+<td>hashedTestAttemptId</td>
+<td>string, required</td>
+<td>The SHA-256 HMAC of the testAttemptId with your <code>CLIENT_SECRET</code></td>
+</tr>
+<tr>
+<td>trackingOptions</td>
+<td>dictionary</td>
+<td>What AutoProctor will track and record. Described below</td>
+</tr>
+</tbody></table>
+<h2 id='trackingoptions'>trackingOptions</h2>
+<p>These are the main parameters that would be part of your <code>trackingOptions</code> dictionary. There are a few additional parameters that are mentioned in the next Section.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Datatype</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>audio</td>
+<td>bool</td>
+<td>true</td>
+<td>Track Audio?</td>
+</tr>
+<tr>
+<td>numHumans</td>
+<td>bool</td>
+<td>true</td>
+<td>Check only one face looking at camera</td>
+</tr>
+<tr>
+<td>tabSwitch</td>
+<td>bool</td>
+<td>true</td>
+<td>Detect if user switched tabs/application</td>
+</tr>
+<tr>
+<td>photosAtRandom</td>
+<td>bool</td>
+<td>true</td>
+<td>Take photos randomly throughout the test</td>
+</tr>
+<tr>
+<td>numPhotosAtRandom</td>
+<td>int</td>
+<td>5</td>
+<td>How many random photos to take</td>
+</tr>
+<tr>
+<td>userScreen</td>
+<td>bool</td>
+<td>true</td>
+<td>Capture screenshot if user switches tab</td>
+</tr>
+<tr>
+<td>captureSwitchedTab</td>
+<td>bool</td>
+<td>true</td>
+<td>Capture screenshot if user switches tab</td>
+</tr>
+<tr>
+<td>preventMultipleScreens</td>
+<td>bool</td>
+<td>true</td>
+<td>Detect multiple monitors (browser-dependent)</td>
+</tr>
+</tbody></table>
+<h2 id='additional-tracking-options'>Additional Tracking Options</h2>
+<p>Apart from the parameters mentioned above, you may add the following parameters too:</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Datatype</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>informUser</td>
+<td>bool</td>
+<td>true</td>
+<td>Should the user get notified of the violations?</td>
+</tr>
+<tr>
+<td>restrictConsole</td>
+<td>bool</td>
+<td>false</td>
+<td>If true then nobody will be able to use the console once the test starts. This option is recommended for Production</td>
+</tr>
+<tr>
+<td>userDetails</td>
+<td>dict</td>
+<td>{}</td>
+<td>Any additional information about the user that you share, so that you can later search by the user</td>
+</tr>
+<tr>
+<td>evidencePushInterval</td>
+<td>int</td>
+<td>15</td>
+<td>Frequency (in seconds) at which violation data are pushed to the server</td>
+</tr>
+</tbody></table>
+<h1 id='results'>Results</h1><h2 id='get-attempt-result'>Get Attempt Result</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span>
+<span class="kd">const</span> <span class="nx">CLIENT_ID</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hdy13o87</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">CLIENT_SECRET</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Jbso5da3H86m</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">testAttemptId</span> <span class="o">=</span> <span class="c1">//Insert Test Attempt ID//;</span>
+<span class="kd">const</span> <span class="nx">hashedTestAttemptId</span> <span class="o">=</span> <span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">HmacSHA256</span><span class="p">(</span><span class="nx">testAttemptId</span><span class="p">,</span> <span class="nx">CLIENT_SECRET</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Hex</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">searchParams</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URLSearchParams</span><span class="p">({</span>
+  <span class="dl">"</span><span class="s2">hashedTestAttemptId</span><span class="dl">"</span><span class="p">:</span> <span class="nx">hashedTestAttemptId</span>
+<span class="p">});</span>
+
+<span class="kd">let</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://www.autoproctor.co/tenant/</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">clientId </span><span class="o">+ </span><span class="dl">"</span><span class="s2">/test-attempts/id/ </span><span class="dl">"</span><span class="o">+</span> <span class="nx">testAttemptId</span><span class="p">;</span>
+<span class="nx">url</span><span class="p">.</span><span class="nx">search</span> <span class="o">=</span> <span class="nx">searchParams</span><span class="p">;</span>
+
+<span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"attemptDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"startedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-05-11T17:27:28+0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"finishedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-05-11T18:15:28+0000"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"trustScore"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.83</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mobile"</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"proctorSettings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"track"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"audio"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nl">"numFaces"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">},</span><span class="w">
+    </span><span class="nl">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"evidence"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"no-face-looking-at-camera"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2021-05-11T17:32:18+0000"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s2">"sampleevidenceurl.com"</span><span class="p">],</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"noise-detected"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2021-05-11T17:42:28+0000"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s2">"sampleevidenceurl.com"</span><span class="p">],</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"random-photo"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2021-05-11T18:02:22+0000"</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="s2">"sampleevidenceurl.com"</span><span class="p">],</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"tab-focus-lost"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2021-05-11T18:12:39+0000"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">]</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves the results of a given Test Attempt. It contains details like the Trust Score and a list of all the violations, their evidence, etc.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://www.autoproctor.co/tenant/&lt;client_id&gt;/test-attempts/id/&lt;test_attempt_id&gt;/</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>clientId</td>
+<td>CLIENT_ID</td>
+</tr>
+<tr>
+<td>hashedTestAttemptId</td>
+<td>The SHA-256 HMAC of the testAttemptId with your <code>CLIENT_SECRET</code></td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>evidence</td>
+<td>list</td>
+<td>[evidence_label, evidence_iso_datetime, is_violation?, evidence_url]</td>
+</tr>
+</tbody></table>
+<h1 id='customising-sdk-behaviour'>Customising SDK Behaviour</h1><h2 id='introduction-2'>Introduction</h2>
+<p>Most of AutoProctor’s functionality is driven by JavaScript’s Custom Events. For instance, if the SDK detects that there are multiple faces detected by the camera, it emits an event, with a specific event code. The SDK then handles the event, based on the event code. This is the default behaviour.</p>
+<h2 id='event-types'>Event Types</h2>
+<p>There are three events that the SDK emits:</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>autoproctorStatusEvent</code></td>
+<td>Emitted as the SDK loads and starts tracking the user. Each event is a ‘good’ event, in that every time an event is emitted, it means that the SDK has finished the current stage of loading, and is proceeding to the next stage.</td>
+</tr>
+<tr>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Occurs when there is an issue loading the SDK or starting the proctoring. For example, if a user denies access to her camera, this event is triggered.</td>
+</tr>
+<tr>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>Occurs after the proctoring has started. Each violation is an event.</td>
+</tr>
+</tbody></table>
+
+<p>For example, the multiple faces detected is an <code>autoproctorEvidenceEvent</code>. The event code for the event is 5002. So, if you want to stop the test if multiple faces are detected, you listen to the autoproctorEvidenceEvent and if the code is 5002, you can stop showing the test, say. Look at the sample code for a simple implementation.</p>
+
+<blockquote>
+<p>If you want to extend the functionality, you would add something like this</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">autoproctorErrorEvent</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">errorCode</span><span class="p">,</span> <span class="nx">errorDetails</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">errorCode</span> <span class="o">===</span> <span class="mi">5002</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="err">“</span><span class="nx">You</span> <span class="nx">cannot</span> <span class="nx">proceed</span> <span class="kd">with</span> <span class="nx">the</span> <span class="nx">test</span><span class="p">.</span><span class="err">”</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id='event-codes'>Event Codes</h2>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Violation?</th>
+<th>Event Type</th>
+<th>Explanation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>2001</td>
+<td>-</td>
+<td><code>autoproctorStatusEvent</code></td>
+<td>Browser is compatible. User has granted permissions</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>-</td>
+<td><code>autoproctorStatusEvent</code></td>
+<td>Video and ML model loaded. Ready to start face detection</td>
+</tr>
+<tr>
+<td>4001</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Incompatible Browser. Doesn&#39;t pass checkBrowserCompatiblity()</td>
+</tr>
+<tr>
+<td>4002</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>From permissions API, user has already blocked access to camera</td>
+</tr>
+<tr>
+<td>4003</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>From permissions API, user has already blocked access to microphone</td>
+</tr>
+<tr>
+<td>4004</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>User has proactively declined access to camera/microphone. Or, the page is being loaded within an insecure context.</td>
+</tr>
+<tr>
+<td>4005</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Hardware error, insecure context, or some other error.</td>
+</tr>
+<tr>
+<td>4006</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>From permissions API, user has already blocked access to camera and mic</td>
+</tr>
+<tr>
+<td>4007</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Audio Not Readable Error in getUserMedia</td>
+</tr>
+<tr>
+<td>4008</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Video Not Readable Error in getUserMedia</td>
+</tr>
+<tr>
+<td>4007</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Mic Not Found in getUserMedia</td>
+</tr>
+<tr>
+<td>4008</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Camera Not Found in getUserMedia</td>
+</tr>
+<tr>
+<td>4009</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>We weren&#39;t able to find a microphone on your device. You need to enable your microphone, or use another device that has a microphone to take this test.</td>
+</tr>
+<tr>
+<td>4010</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>We weren&#39;t able to find a camera (or webcam) on your device. You need to enable your camera, or use another device that has a camera to take this test.</td>
+</tr>
+<tr>
+<td>4011</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing. Please reload the page to provide the access.</td>
+</tr>
+<tr>
+<td>4012</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>The user selected a screen, window, tab, or other source of screen data, but a hardware or operating system level error or lockout occurred, preventing the sharing of the selected source.</td>
+</tr>
+<tr>
+<td>4013</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>No sources of screen video are available for capture.</td>
+</tr>
+<tr>
+<td>4014</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>You must share your entire screen in order to proceed with the test. Please reload the page to select again.</td>
+</tr>
+<tr>
+<td>4015</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>We have detected multiple monitors. Please disconnect the extra monitor (or displays like Chromecast). If you continue without disconnecting, your teacher will be informed of multiple monitors.</td>
+</tr>
+<tr>
+<td>4016</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Use latest version of Safari on iPhone or iPad. Else, use Chrome</td>
+</tr>
+<tr>
+<td>4017</td>
+<td>-</td>
+<td><code>autoproctorErrorEvent</code></td>
+<td>Please use Chrome or Firefox, if you want to procced with the test. (if forceCaptureSwitchedTab is true)</td>
+</tr>
+<tr>
+<td>5001</td>
+<td>Yes</td>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>No one looking at camera  Yes</td>
+</tr>
+<tr>
+<td>5002</td>
+<td>Yes</td>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>More than 1 Person in Video</td>
+</tr>
+<tr>
+<td>5003</td>
+<td>No</td>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>Random photo taken   No</td>
+</tr>
+<tr>
+<td>5004</td>
+<td>Yes</td>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>Audio above background levels Yes</td>
+</tr>
+<tr>
+<td>5005</td>
+<td>Yes</td>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>User switched away from current tab to another tab or application Yes</td>
+</tr>
+<tr>
+<td>5006</td>
+<td>No</td>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>User returned to test tab from another tab or application  No</td>
+</tr>
+<tr>
+<td>5007</td>
+<td>-</td>
+<td><code>autoproctorEvidenceEvent</code></td>
+<td>Multiple Monitors detected</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="docs.html#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

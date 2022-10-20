@@ -1,0 +1,441 @@
+
+
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="shortcut icon" href="https://cdn.autoproctor.co/static/img/favicon.png"/>
+        
+            <script
+                    src="https://browser.sentry-cdn.com/5.17.0/bundle.min.js"
+                    integrity="sha384-lowBFC6YTkvMIWPORr7+TERnCkZdo5ab00oH5NkFLeQUAmBTLGwJpFjF6djuxJ/5"
+                    crossorigin="anonymous"
+            ></script>
+        
+        
+
+        <title>AutoProctor: Login</title>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
+          
+
+    
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.css"
+            rel="stylesheet"
+    />
+    
+        <link rel="stylesheet" href="https://cdn.autoproctor.co/static/style/main-style.min.css?v=2.2"/>
+    
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .soc-breadcrumb {
+                @apply hidden;
+            }
+
+            .test-admin-primary-sidebar {
+                @apply -mt-px;
+            }
+
+            audio, canvas, iframe, img, object, video {
+                display: unset !important;
+            }
+
+            .soc-main-layout {
+                font-family: "Roboto", serif !important;
+            }
+
+            .ap-login-btn {
+                @apply py-3 px-9;
+            }
+
+            .ap-lp-hero {
+                @apply p-0;
+            }
+
+            .ap-login-btn > span {
+                @apply ml-2.5;
+            }
+
+            .non-footer-content {
+                flex: 1 0 auto;
+            }
+
+
+        
+            #nav-logo {
+                left: 0;
+                /* margin-left: 125px; */
+            }
+        
+
+            .sidenav li > a:hover {
+                @apply bg-transparent;
+            }
+        }
+    </style>
+
+
+
+    <style>
+        #terms-condition-checbox {
+            margin-top: 6px;
+            margin-right: 8px;
+            position: unset;
+            opacity: 1;
+            pointer-events: unset;
+            outline-color: #ef4444;
+        }
+
+        #nav-right-half {
+            display: none;
+        }
+
+        .nav_left_half{
+            padding: 0.5rem 0;
+        }
+
+    </style>
+
+    
+
+    <script>
+        var gaIsAvailable = false;
+    </script>
+    
+        <script type="text/javascript">
+            gaIsAvailable = true;
+            var gaID = "UA-165591693-1";
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', gaID, 'auto');
+            
+            ga('send', 'pageview');
+        </script>
+
+    
+</head>
+
+<body class="flex min-h-screen flex-col">
+<div class="non-footer-content">
+    
+        
+            <div class="navbar-fixed fixed z-30 w-full px-4 lg:px-14 bg-gradient-to-r from-[#363FB5] to-[#00A36D] shadow-lg" id="navbar-container">
+                <nav class="relative py-2.5 max-w-7xl nav-content mx-auto">
+                    <div class="flex items-center justify-between flex-row">
+                        <div class="nav_left_half flex flex-row-reverse items-center justify-end w-full gap-4 md:w-auto">
+                            <a href="logout.html" class="flex items-center gap-x-3" id="nav-logo">
+                                <span class="sr-only">autoproctor</span>
+                                <img
+                                        class="w-auto h-6"
+                                        src="https://cdn.autoproctor.co/static/img/icons/ap-logo.svg"
+                                        alt=""
+                                />
+                                <span class="text-2xl text-white font-montserrat">AutoProctor</span>
+                            </a>
+                            
+                        </div>
+
+                        <div id="nav-right-half" class="items-center hidden gap-8 md:flex">
+                            <ul class="dropdown-content hidden absolute top-12 right-8 bg-white text-center text-emerald-600 shadow-lg rounded py-1.5 space-y-2" id="account-dropdown" style="min-width: 150px;z-index: 100;">
+                                
+                                <li><a class="hover:underline ph-no-capture" href="logout.html">Logout</a></li>
+                            </ul>
+
+                            <ul class="right flex items-center md:space-x-6">
+                                
+
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="pricing" href="../pricing.html">Pricing</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="faqs" href="../faqs.html">FAQs</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a href="https://help.autoproctor.co/">Help</a></li>
+                                    
+                                        <li class="inline-flex">
+                                            <a
+                                                    href="login/index.html"
+                                                    class="inline-flex items-center py-2.5 text-lg font-medium text-white bg-white border border-transparent rounded-full bg-opacity-30 px-9 hover:bg-opacity-50 transition-all ease-in duration-200 font-roboto"
+                                            >
+                                                SIGN IN
+                                                <span class="ml-2">
+                                                <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="w-[18px] h-[18px]"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                        stroke-width="2.5"
+                                                >
+                                                <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M9 5l7 7-7 7"
+                                                />
+                                                </svg>
+                                            </span>
+                                            </a>
+                                        </li>
+                                    
+                                
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+
+        
+    
+
+    <div class="page-container">
+        <div class="content">
+            
+    <div class="2xl:max-w-5xl lg:max-w-4xl md:max-w-3xl max-w-xl mx-auto w-full px-9 ">
+        <div class="flex flex-col lg:flex-row items-center justify-center mx-auto mb-24 mt-32 lg:mt-64 lg:justify-between">
+            <div class="w-4/5 sm:w-3/4 max-w-[350px]">
+                <img src="https://cdn.autoproctor.co/static/img/icons/signin-desktop.svg" class="w-full" />
+            </div>
+            <div class="mt-9 lg:mt-0 ml-0 lg:ml-4">
+                <div class="flex items-center justify-center mb-8 gap-x-2">
+                    <img src="https://cdn.autoproctor.co/static/img/icons/ap-logo.svg" />
+                    <div class="title_text text-[21px] xs:text-2xl font-medium text-left font-family-ibm-plex opacity-90">Sign In to AutoProctor</div>
+                </div>
+                <div class="flex items-center flex-col justify-center">
+                    
+                        <a class="text-black flex rounded-full font-medium lg:font-semibold justify-center items-center text-base lg:text-xl lg:tracking-widest box-border border w-72 lg:w-96 h-12 border-main-darkBlue hover:underline font-family-ibm-plex" href="https://www.autoproctor.co/account/authorize/google/user/%2Faccount%2Fsubscribe%3FplanType%3Dstandard-quarterly%26currency%3DUSD/">
+                            <img src="https://cdn.autoproctor.co/static/img/icons/google-logo.svg" class="h-6 w-6 mr-2.5" />
+                            <span class="opacity-60">Sign In with Google</span>
+                            <span class="w-6 h-6 ml-5 lg:ml-10"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                              </svg></span>
+                        </a>
+                    
+                    
+                        <a class="text-black flex rounded-full font-medium lg:font-semibold justify-center items-center text-base lg:text-xl lg:tracking-widest box-border border w-72 lg:w-96 h-12 border-main-darkBlue hover:underline font-family-ibm-plex" href="https://www.autoproctor.co/account/authorize/microsoft/user/%2Faccount%2Fsubscribe%3FplanType%3Dstandard-quarterly%26currency%3DUSD/" style="margin-top: 16px">
+                            <img src="https://cdn.autoproctor.co/static/img/icons/ms-logo.svg" class="h-6 w-6 mr-2.5" />
+                            <span class="opacity-60">Sign In with Microsoft</span>
+                            <span class="w-6 h-6 ml-1 lg:ml-4"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                              </svg></span>
+                        </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <footer class="font-family-ibm-plex bg-main-darkNavyBlue py-12 px-4 sm:px-6 lg:px-8 bottom-0 w-full mt-auto" style="box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.16);" aria-labelledby="footer-heading">
+
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-between gap-10 ">
+                    <div class="space-y-4 xl:col-span-1">
+                        <a href="subscribe%3FplanType=standard-quarterly&amp;currency=USD.html#" class="flex items-center gap-x-3">
+                            <span class="sr-only">autoproctor</span>
+                            <img
+                                    class="w-48 h-auto"
+                                    src="../static/img/logo.png"
+                                    alt="Autoproctor logo"
+                            />
+                        </a>
+                        <p class="text-base text-white">© 2022, Socratease Inc. All rights reserved.</p>
+                    </div>
+                    <div class="max-w-md flex flex-wrap justify-between gap-4">
+                        <a href="../terms-service.html" class="text-white hover:underline">Terms and Conditions</a>
+                        <a href="../privacy-policy.html" class="text-white hover:underline">Privacy Policies and Cookies</a>
+                        <a href="https://autoproctor.freshdesk.com/" target="_blank" class="text-white hover:underline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
+
+    <script src="https://cdn.autoproctor.co/static/scripts/common-functions.js?v=s8g"></script>
+
+    <script>
+        var maxSentryEvents = 6;
+        var numberOfCurrentSentryEvents = 0;
+        const byPassedErrorsDict = [{ error: "privateSpecialRepair", reason: "Chrome mobile view error"},
+            { error: "Non-Error promise rejection captured with keys", reason: ""},
+            { error: "Non-Error promise rejection captured with value", reason: "https://forum.sentry.io/t/unhandledrejection-non-error-promise-rejection-captured-with-value/14062/12"},
+            { error: "getReadModeExtract", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected"},
+            { error: "getReadModeRender", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "getReadModeConfig", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "Identifier 'isMainframe' has already been declared", reason: "Not from our codebase" },
+            { error: "runCustomize is not defined", reason: "Not from our codebase" },
+            { error: "processRandomSelector is not defined", reason: "Not from our codebase" },
+            { error: "ResizeObserver loop limit", reason: "Can be ignored: https://stackoverflow.com/questions/49384120/resizeobserver-loop-limit-exceeded" }]
+        const errorArr = byPassedErrorsDict.map(function(ped) {  return ped.error; })
+        var serverErrorsRegex = new RegExp(errorArr.join("|"), "mi");
+
+        
+            Sentry.init({
+                dsn: "https://cac61d5e1fe04b01a6409048914ff88e@o288839.ingest.sentry.io/5911954",
+                beforeSend(event) {
+                    numberOfCurrentSentryEvents++;
+                    if (numberOfCurrentSentryEvents <= maxSentryEvents) {
+                        return event;
+                    } else {
+                        return null;
+                    }
+                },
+                tracesSampleRate: 1.0,
+                environment: "production",
+                ignoreErrors: [serverErrorsRegex],
+            });
+            
+        
+
+        
+
+        window.addEventListener("load", function () {
+            if (typeof $ === "undefined") {
+                alert("There was an error connecting to the internet. We will now try reloading the page.");
+                window.location.reload();
+                return;
+            }
+
+            $("#sidebar-collapsible").on('click', function () {
+                if (!$(this).hasClass("ques-container-active")) {
+                    $(this).addClass("ques-container-active");
+                    $(this).find('.sidebar-uncollapsible-icon').hide();
+                    $(this).find('.collapsible-body').show();
+                    $(this).find(".sidebar-collapsible-icon").show();
+                } else {
+                    $(this).find('.sidebar-collapsible-icon').hide();
+                    $(this).find('.collapsible-body').hide();
+                    $(this).find(".sidebar-uncollapsible-icon").show();
+                    $("#sidebar-collapsible").removeClass("ques-container-active");
+                }
+            });
+
+            $('body').click(function(e) {
+                if (!$(e.target).closest("#account-dropdown").length && !$(e.target).closest(".dropdown-trigger").length) {
+                    $("#account-dropdown").hide();
+                }
+            });
+
+            const $staticSidebarOverlay = $('#static-sidebar--overlay');
+            const $staticSidebarContainer = $('#static-sidebar--container');
+            const $staticSidebar = $('#static-sidebar');
+
+            function toggleStaticSidebarState(state) {
+                if (state === 'on') {
+                    $staticSidebar.show();
+                    $staticSidebarOverlay.removeClass('opacity-0');
+                    $staticSidebarOverlay.addClass('opacity-100');
+                    $staticSidebarContainer.removeClass('-translate-x-full');
+                    $staticSidebarContainer.addClass('translate-x-0');
+                } else {
+                    $staticSidebar.hide();
+                    $staticSidebarOverlay.removeClass('opacity-100');
+                    $staticSidebarOverlay.addClass('opacity-0');
+                    $staticSidebarContainer.removeClass('translate-x-0');
+                    $staticSidebarContainer.addClass('-translate-x-full');
+                }
+            }
+
+
+            $('#sidebar-trigger').click(function () {
+                if ($staticSidebarContainer.hasClass('-translate-x-full')) {
+                    toggleStaticSidebarState('on');
+                } else {
+                    toggleStaticSidebarState('off');
+                }
+            })
+
+            $staticSidebarOverlay.click(function() {
+                toggleStaticSidebarState('off');
+            })
+
+            
+
+
+            
+                
+            
+
+            const upgradePlanUrl = "/account/edit-profile";
+            const upgradePlanMsg = "This feature is available only for Premium Users. Click <a href='https://www.autoproctor.co/account/login/&quot;&#32;+&#32;upgradePlanUrl&#32;+&#32;&quot;' target='_blank'>here</a> to upgrade to a Premium Plan."
+
+            $('.upgrade-premium-feature').click(function () {
+                Swal.fire({
+                    type: "info",
+                    title: "Premium Feature",
+                    html: upgradePlanMsg,
+                });
+            });
+
+            let updatePolicyVersion, acceptNewTerms;
+            
+
+            let policyTitle, policyMsg;
+            const termsOfUseUrl = "/terms-service";
+            const privacyPolicyUrl =
+            "/privacy-policy"
+
+            if (updatePolicyVersion === true) {
+                policyTitle = "Updated Terms of Use and Privacy Policy";
+                policyMsg = "We have updated our <a href='https://www.autoproctor.co/account/login/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/account/login/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our new Policies.";
+            } else if (acceptNewTerms === true) {
+                policyTitle = "Terms of Use and Privacy Policy";
+                policyMsg = "These are our <a href='https://www.autoproctor.co/account/login/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/account/login/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our Policies.";
+            }
+
+            if (updatePolicyVersion === true || acceptNewTerms === true) {
+                Swal.fire({
+                    type: "info",
+                    title: policyTitle,
+                    html: policyMsg,
+                    allowOutsideClick: false
+                }).then((result) => {
+                    if (result.value) {
+                        const url = "/account/update-policy-version/";
+                        const ajaxParams = {headers: {'X-CSRF-Token': "ImVhMjczNjA3YTg0Y2IzMWNhMDg3YzRkODRiZDBiMDJiMjVjYzkzNzci.Y1DjGQ.1ipoDt4Rka2PZH9x7msS2tt3dm8"}};
+                        const successRedirectUrl = window.location;
+                        makePostRequest(url, {}, successRedirectUrl, ajaxParams);
+
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+</body>
+</html>

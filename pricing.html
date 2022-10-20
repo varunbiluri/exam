@@ -1,0 +1,1204 @@
+
+
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="shortcut icon" href="https://cdn.autoproctor.co/static/img/favicon.png"/>
+        
+            <script
+                    src="https://browser.sentry-cdn.com/5.17.0/bundle.min.js"
+                    integrity="sha384-lowBFC6YTkvMIWPORr7+TERnCkZdo5ab00oH5NkFLeQUAmBTLGwJpFjF6djuxJ/5"
+                    crossorigin="anonymous"
+            ></script>
+        
+        
+
+        <title>AutoProctor: Pricing </title>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
+          
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.css"
+            rel="stylesheet"
+    />
+    
+        <link rel="stylesheet" href="https://cdn.autoproctor.co/static/style/main-style.min.css?v=2.2"/>
+    
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .soc-breadcrumb {
+                @apply hidden;
+            }
+
+            .test-admin-primary-sidebar {
+                @apply -mt-px;
+            }
+
+            audio, canvas, iframe, img, object, video {
+                display: unset !important;
+            }
+
+            .soc-main-layout {
+                font-family: "Roboto", serif !important;
+            }
+
+            .ap-login-btn {
+                @apply py-3 px-9;
+            }
+
+            .ap-lp-hero {
+                @apply p-0;
+            }
+
+            .ap-login-btn > span {
+                @apply ml-2.5;
+            }
+
+            .non-footer-content {
+                flex: 1 0 auto;
+            }
+
+
+        
+            #nav-logo {
+                left: 0;
+                /* margin-left: 152px; */
+            }
+        
+
+            .sidenav li > a:hover {
+                @apply bg-transparent;
+            }
+        }
+    </style>
+
+
+    
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                                });
+                        }
+
+                        ((p = t.createElement("script")).type = "text/javascript"),
+                            (p.async = !0),
+                            (p.src = s.api_host + "/static/array.js"),
+                            (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
+                                    " "
+                                ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("Asio7_Oj3Io9h2WMlLHxMHrsHdiMv_NdVF9WXKbVQUo", {api_host: "https://app.posthog.com"});
+            
+        </script>
+    
+
+    <script>
+        var gaIsAvailable = false;
+    </script>
+    
+        <script type="text/javascript">
+            gaIsAvailable = true;
+            var gaID = "UA-165591693-1";
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', gaID, 'auto');
+            
+            ga('send', 'pageview');
+        </script>
+
+    
+</head>
+
+<body class="flex min-h-screen flex-col">
+<div class="non-footer-content">
+    
+        
+            <div class="navbar-fixed fixed z-30 w-full px-4 lg:px-14 bg-gradient-to-r from-[#363FB5] to-[#00A36D] shadow-lg" id="navbar-container">
+                <nav class="relative py-2.5 max-w-7xl nav-content mx-auto">
+                    <div class="flex items-center justify-between flex-row">
+                        <div class="nav_left_half flex flex-row-reverse items-center justify-end w-full gap-4 md:w-auto">
+                            <a href="account/logout.html" class="flex items-center gap-x-3" id="nav-logo">
+                                <span class="sr-only">autoproctor</span>
+                                <img
+                                        class="w-auto h-6"
+                                        src="https://cdn.autoproctor.co/static/img/icons/ap-logo.svg"
+                                        alt=""
+                                />
+                                <span class="text-2xl text-white font-montserrat">AutoProctor</span>
+                            </a>
+                            
+
+                                <button
+                                        type="button"
+                                        class="flex items-center -mr-2 md:hidden sidenav-trigger inline-flex items-center justify-center p-2 text-white rounded-md hover:text-gray-200 focus:outline-none ph-no-capture"
+                                        id="sidebar-trigger"
+
+                                >
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg
+                                            class="w-6 h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            aria-hidden="true"
+                                    >
+                                        <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2.5"
+                                                d="M4 6h16M4 12h16M4 18h16"
+                                        />
+                                    </svg>
+                                </button>
+
+                            
+                        </div>
+
+                        <div id="nav-right-half" class="items-center hidden gap-8 md:flex">
+                            <ul class="dropdown-content hidden absolute top-12 right-8 bg-white text-center text-emerald-600 shadow-lg rounded py-1.5 space-y-2" id="account-dropdown" style="min-width: 150px;z-index: 100;">
+                                
+                                <li><a class="hover:underline ph-no-capture" href="account/logout.html">Logout</a></li>
+                            </ul>
+
+                            <ul class="right flex items-center md:space-x-6">
+                                
+
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="pricing" href="pricing.html">Pricing</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="faqs" href="faqs.html">FAQs</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a href="https://help.autoproctor.co/">Help</a></li>
+                                    
+                                        <li class="inline-flex">
+                                            <a
+                                                    href="account/login/index.html"
+                                                    class="inline-flex items-center py-2.5 text-lg font-medium text-white bg-white border border-transparent rounded-full bg-opacity-30 px-9 hover:bg-opacity-50 transition-all ease-in duration-200 font-roboto"
+                                            >
+                                                SIGN IN
+                                                <span class="ml-2">
+                                                <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="w-[18px] h-[18px]"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                        stroke-width="2.5"
+                                                >
+                                                <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M9 5l7 7-7 7"
+                                                />
+                                                </svg>
+                                            </span>
+                                            </a>
+                                        </li>
+                                    
+                                
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+
+        
+            
+    <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true" style="display: none" id="static-sidebar">
+        <div class="fixed inset-0 bg-gray-600 bg-opacity-75 opacity-0"  id="static-sidebar--overlay"  aria-hidden="true"></div>
+        <div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-200 -translate-x-full" id="static-sidebar--container">
+
+
+
+
+
+
+
+
+
+
+            <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                <nav class="px-4 mt-4 space-y-1 text-indigo-700 text-lg font-medium">
+                    
+
+                    
+
+
+                    <a href="https://help.autoproctor.co/how-to-add-timer-proctor-google-forms/" target="_blank" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        How it works
+                    </a>
+
+                    <a href="pricing.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        Pricing
+                    </a>
+
+                    <a href="faqs.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        FAQs
+                    </a>
+
+                    <a href="https://help.autoproctor.co/" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        Support
+                    </a>
+
+                    
+                        <a href="account/login/index.html" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg>
+                            Login
+                        </a>
+                    
+                </nav>
+            </div>
+        </div>
+
+        <div class="flex-shrink-0 w-14" aria-hidden="true">
+            <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+    </div>
+
+        
+    
+
+    <div class="page-container">
+        <div class="content">
+            
+
+    
+    
+    
+    
+    
+
+    <div class="max-w-7xl mx-auto font-family-ibm-plex pb-24">
+    <h1
+            class="text-3xl font-bold text-center tracking-tight mt-28 mb-8 static text-black"
+    >
+        Plans that work for everyone
+    </h1>
+    <div class="flex flex-col items-center">
+        <div class="mx-auto w-auto h-12">
+            <label
+                    class="w-fit border-2 border-main-oceanGreen box-border h-auto flex items-center rounded-full text-center cursor-pointer"
+            >
+                
+                    <span
+                            class="pricing-toggle__period-label text-base py-2 px-4 mx-1 my-1 text-center font-medium pricing-toggle__month-label pricing-toggle__period-label--selected ph-no-capture"
+                    >Monthly</span
+                    >
+                    <input type="checkbox" id="subscription-period" />
+                    <span
+                            class="pricing-toggle__period-label text-base py-2 px-4 mx-1 my-1 text-center font-medium pricing-toggle__year-label ph-no-capture"
+                    >Quarterly</span
+                    >
+                
+            </label>
+        </div>
+    </div>
+
+    <div
+            class="text-center font-normal text-base text-gray-700 w-72 mt-3 mb-16 mx-auto"
+    >
+    <span style="padding: 5px 0 5px 0">
+      Save upto 20% with Quarterly plans
+    </span>
+    </div>
+
+    
+        <div
+                class="pricing-cards flex lg:flex-row flex-col text-center items-center lg:items-baseline justify-center lg:justify-between max-w-5xl mx-auto w-11/12"
+                id="monthly-price-card-deck"
+        >
+     
+    <div class="price-card__container w-11/12 h-[720px] lg:mb-0 mb-8">
+        <div
+                class="price-card w-11/12 max-w-[500px] mx-auto h-[720px] bg-gray-50 rounded-b-lg border-b border-gray-50 shadow-lg"
+        >
+            <h5
+                    class="price-card__title rounded-t-lg h-4 standard"
+            ></h5>
+
+            <p
+                    class="price-card__plan_name mt-8 mb-8 font-semibold text-4xl tracking-widest text-main-darkBlue"
+            >
+                Standard
+            </p>
+
+               
+
+            <p class="price-card__ideal text-lg text-black -mt-1 mb-3">
+                Ideal for Individuals
+            </p>
+            <div
+                    class="price-card__cost-container flex h-24 flex-col items-center justify-center text-main-prussianBlue mb-3"
+            >
+                <h3
+                        class="price-card__cost h-14 mb-1 text-4xl text-black font-normal"
+                        id="price-card__cost-monthly-standard"
+                >
+                    $10/mo
+                </h3>
+                <span class="price-card__cost-period h-4 text-sm text-black"
+                >paid monthly</span
+                >
+            </div>
+
+            <ul class="price-card__tests h-20 mb-4 text-lg font-bold">
+                <li id="price-card__tests-standard">
+                    150 Proctored Tests
+                </li>
+                <li> Unlimited Timed Tests</li>
+            </ul>
+
+            <div class="w-full space-y-4 h-44 mb-12">
+                
+                    <h6 class="font-semibold text-base">Features</h6>
+                    <ul class="px-4 md:px-8 space-y-2 text-left">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Integration with Google Classroom
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>Export to Excel
+                        </li>
+                        <li>&nbsp;</li>
+                    </ul>
+                
+            </div>
+
+            
+                <a
+                        href="account/subscribe%3FplanType=standard-monthly&amp;currency=USD.html"
+                        class="rounded-full font-semibold text-center max-w-[250px] h-12 justify-center w-full flex items-center text-base uppercase tracking-widest mx-auto text-white bg-[#3fbeb1] font-family-ibm-plex"
+                        id="price-card__btn-monthly-standard"
+                >START STANDARD<span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg></span
+                ></a
+                >
+            
+        </div>
+    </div>
+
+    <div class="price-card__container w-11/12 h-[720px] lg:mb-0 mb-8">
+        <div
+                class="price-card w-11/12 max-w-[500px] mx-auto h-[720px] bg-gray-50 rounded-b-lg border-b border-gray-50 shadow-lg"
+        >
+            <h5
+                    class="price-card__title rounded-t-lg h-4 premium"
+            ></h5>
+
+            <p
+                    class="price-card__plan_name mt-8 mb-8 font-semibold text-4xl tracking-widest text-main-darkBlue"
+            >
+                Premium
+            </p>
+
+               
+
+            <p class="price-card__ideal text-lg text-black -mt-1 mb-3">
+                Ideal for Teams
+            </p>
+            <div
+                    class="price-card__cost-container flex h-24 flex-col items-center justify-center text-main-prussianBlue mb-3"
+            >
+                <h3
+                        class="price-card__cost h-14 mb-1 text-4xl text-black font-normal"
+                        id="price-card__cost-monthly-premium"
+                >
+                    $20/mo
+                </h3>
+                <span class="price-card__cost-period h-4 text-sm text-black"
+                >paid monthly</span
+                >
+            </div>
+
+            <ul class="price-card__tests h-20 mb-4 text-lg font-bold">
+                <li id="price-card__tests-premium">
+                    150 Proctored Tests
+                </li>
+                <li> Unlimited Timed Tests</li>
+            </ul>
+
+            <div class="w-full space-y-4 h-44 mb-12">
+                
+                    <h6 class="font-semibold text-base">Everything in Standard and</h6>
+                    <ul class="px-4 md:px-8 space-y-2 text-left">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Multiple Email Ids
+                            <div class="eqp-tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="eqp-tooltiptext eqp-tooltiptext-mob shadow-md">Multiple users can use the same account and share the test balance</span>
+                            </div>
+
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Consolidated Reports
+                            <div class="eqp-tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="eqp-tooltiptext eqp-tooltiptext-mob shadow-md">Get detailed evidence report of all test takers at once</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Automated Export to Google Sheets
+                            <div class="eqp-tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="eqp-tooltiptext eqp-tooltiptext-mob shadow-md">Automatically write test results to Google Sheet</span>
+                            </div>
+                        </li>
+                    </ul>
+                
+            </div>
+
+            
+                <a
+                        href="account/subscribe%3FplanType=premium-monthly&amp;currency=USD.html"
+                        class="rounded-full font-semibold text-center max-w-[250px] h-12 justify-center w-full flex items-center text-base uppercase tracking-widest mx-auto text-white bg-[#3fbeb1] font-family-ibm-plex"
+                        id="price-card__btn-monthly-premium"
+                >START PREMIUM<span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg></span
+                ></a
+                >
+            
+        </div>
+    </div>
+
+</div>
+
+    
+        <div
+                class="pricing-cards flex lg:flex-row flex-col text-center justify-center items-center lg:items-baseline lg:justify-between max-w-5xl mx-auto w-11/12"
+                id="quarterly-price-card-deck"
+                style="display: none"
+        >
+     
+    <div class="price-card__container w-11/12 h-[720px] lg:mb-0 mb-8">
+        <div
+                class="price-card w-11/12 max-w-[500px] mx-auto h-[720px] bg-gray-50 rounded-b-lg border-b border-gray-50 shadow-lg"
+        >
+            <h5
+                    class="price-card__title rounded-t-lg h-4 standard"
+            ></h5>
+            <p
+                    class="price-card__plan_name mt-8 mb-8 font-semibold text-4xl tracking-widest text-main-darkBlue"
+            >
+                Standard
+            </p>
+               
+            <p class="price-card__ideal text-lg text-black -mt-1 mb-3">
+                Ideal for Individuals
+            </p>
+            <div
+                    class="price-card__cost-container flex h-24 flex-col items-center justify-center text-main-prussianBlue mb-7"
+            >
+                <h3
+                        class="price-card__cost h-14 mb-1 text-4xl text-black font-normal"
+                        id="price-card__cost-quarterly-standard"
+                >
+                    $23/3 mo
+                </h3>
+                <span class="price-card__cost-period h-4 text-sm text-black"
+                >paid every 3 months</span
+                >
+            </div>
+            <ul class="price-card__tests h-20 mb-4">
+                <li
+                        class="text-sm"
+                        id="price-card__tests-standard"
+                >
+                    300 Proctored Tests
+                </li>
+                <li class="text-sm">Unlimited Timed Tests</li>
+            </ul>
+
+            <div class="w-full space-y-4 h-44 mb-12">
+                
+                    <h6 class="font-semibold text-base">Features</h6>
+                    <ul class="px-4 md:px-8 space-y-2 text-left">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>Integration with Google Classroom
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>Export to Excel
+                        </li>
+                        <li>&nbsp;</li>
+                    </ul>
+                
+            </div>
+
+            
+                <a
+                        href="account/subscribe%3FplanType=standard-quarterly&amp;currency=USD.html"
+                        class="rounded-full font-semibold text-center max-w-[250px] h-12 justify-center w-full flex items-center text-base uppercase tracking-widest mx-auto text-white bg-[#3fbeb1] font-family-ibm-plex"
+                        id="price-card__btn-quarterly-standard"
+                >START STANDARD<span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg></span
+                ></a
+                >
+            
+        </div>
+    </div>
+
+    <div class="price-card__container w-11/12 h-[720px] lg:mb-0 mb-8">
+        <div
+                class="price-card w-11/12 max-w-[500px] mx-auto h-[720px] bg-gray-50 rounded-b-lg border-b border-gray-50 shadow-lg"
+        >
+            <h5
+                    class="price-card__title rounded-t-lg h-4 premium"
+            ></h5>
+            <p
+                    class="price-card__plan_name mt-8 mb-8 font-semibold text-4xl tracking-widest text-main-darkBlue"
+            >
+                Premium
+            </p>
+               
+            <p class="price-card__ideal text-lg text-black -mt-1 mb-3">
+                Ideal for Teams
+            </p>
+            <div
+                    class="price-card__cost-container flex h-24 flex-col items-center justify-center text-main-prussianBlue mb-7"
+            >
+                <h3
+                        class="price-card__cost h-14 mb-1 text-4xl text-black font-normal"
+                        id="price-card__cost-quarterly-premium"
+                >
+                    $46/3 mo
+                </h3>
+                <span class="price-card__cost-period h-4 text-sm text-black"
+                >paid every 3 months</span
+                >
+            </div>
+            <ul class="price-card__tests h-20 mb-4">
+                <li
+                        class="text-sm"
+                        id="price-card__tests-premium"
+                >
+                    300 Proctored Tests
+                </li>
+                <li class="text-sm">Unlimited Timed Tests</li>
+            </ul>
+
+            <div class="w-full space-y-4 h-44 mb-12">
+                
+                    <h6 class="font-semibold text-base">
+                        Everything in Standard and
+                    </h6>
+                    <ul class="px-4 md:px-8 space-y-2 text-left">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Multiple Email Ids
+                            <div class="eqp-tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="eqp-tooltiptext eqp-tooltiptext-mob shadow-md">Multiple users can use the same account and share the test balance</span>
+                            </div>
+
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Consolidated Reports
+                            <div class="eqp-tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="eqp-tooltiptext eqp-tooltiptext-mob shadow-md">Get detailed evidence report of all test takers at once</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Automated Export to Google Sheets
+                            <div class="eqp-tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span class="eqp-tooltiptext eqp-tooltiptext-mob shadow-md">Automatically write test results to Google Sheet</span>
+                            </div>
+                        </li>
+                    </ul>
+                
+            </div>
+
+            
+                <a
+                        href="account/subscribe%3FplanType=premium-quarterly&amp;currency=USD.html"
+                        class="rounded-full font-semibold text-center max-w-[250px] h-12 justify-center w-full flex items-center text-base uppercase tracking-widest mx-auto text-white bg-[#3fbeb1] font-family-ibm-plex"
+                        id="price-card__btn-quarterly-premium"
+                >START PREMIUM<span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg></span
+                ></a
+                >
+            
+        </div>
+    </div>
+
+</div>
+
+<div
+        class="bg-gradient-to-r from-[#830bd7] to-[#d3095a] max-w-2xl w-10/12 flex flex-col items-start mx-auto rounded-lg mt-2 mb-10 lg:my-12 font-family-ibm-plex px-8 py-6 space-y-4"
+>
+    <!-- <i class="material-icons">info_outline</i> -->
+    <p class="font-bold text-3xl text-white">
+        <span class="top-up-price"></span> / 150
+        <span class="font-normal text-2xl sm:text-3xl">
+            additional tests</span
+        >
+    </p>
+    <p class="font-medium text-base text-white">
+        Pay <span class="top-up-price"></span> for 150 Tests attempts. This
+        tops up your exisiting subscription. Top-ups cannot be bought without
+        a subscription plan.
+    </p>
+</div>
+
+<h3
+        class="px-8 text-3xl mb-6 mt-10 tracking-tight text-center font-bold text-black"
+>
+    Questions? We have answers.
+</h3>
+    
+
+        <div class="max-w-7xl mx-auto mb-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+                <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What are Test Attempts? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">When a student <b>successfully submits</b> a test, we count it as a Test Attempt. For example, if there are 30 students in your class and they submit 2 tests each, the total number of Test Attempts is <b>30 x 2 = 60</b>.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> Can I try AutoProctor before I pay for it? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Yes, when you create an account with us, you get <b>25 Timer + Proctor</b> Test Attempts, and <b> 25 Timer-only Test Attempts</b> for free. You can evaluate if AutoProctor works for you, and then proceed to subscribe.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What if I need more than the number of Test Attempts shown in the cards above? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Once you become a subscriber, you can always buy more Test Attempts. We call this topping up your subscription. The cost is <span class='top-up-price'></span> for 150 Test Attempts.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> How do I purchase for Multiple Teachers or Accounts? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500"><p>If you want multiple users to access the same account, you can do so by purchasing the Premium Subscription. With this, you can create a Team on AutoProctor. You can then add and exclude members from your Team.</p><p>If you have a business email ID (for example, one ending with @school.com) and a Premium subscription, all other users whose email IDs end with @school.com can access your account. You can further restrict who within this set of users can access your account via whitelisting and blacklisting users.</p></p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> Do the Test Packs from one month carry over to the next? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Yes, they do. For example, let’s say you had 250 Test Attempts on 1st February. Because your subscription got renewed on 2nd February, it increased to 450 Test Attempts. Say you used only 150 Test Attempts in February. When your subscription is renewed on March 2nd, your account balance will be 450 - 150 + 200 = 500 Test Attempts</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What happens if my subscription doesn't auto-renew? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">If the subscription doesn't auto-renew, your Test Attempt Balance will be reset to 0, but all the data (tests, reports, etc) will still be stored. You will also be unable to access your AutoProctor account until you renew your subscription. If the renewal doesn't happen for 2 months, all the data associated with your account will be deleted</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> How can I buy Timer-Only Test Packs? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">You don’t need to buy a pack for Timer Only. If you are a subscriber, you can use as many Timer-Only Attempts as you want. You have unlimited Timer-Only Attempts.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> If I cancel my subscription, do I get the pro-rated amount back? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">No. Let’s say you subscribed on 14th March. You decided to cancel your subscription on 18th March. Even if you cancel it on 18th March, you are eligible to use AutoProctor until 13th April. We will not auto-charge your card on 14th April. That is, for every subscription, you are charged until the end of the billing cycle. There is no pro-rated refund.</p>
+                        </dd>
+                    </div>
+                    
+
+                </dl>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <footer class="font-family-ibm-plex bg-main-darkNavyBlue py-12 px-4 sm:px-6 lg:px-8 bottom-0 w-full mt-auto" style="box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.16);" aria-labelledby="footer-heading">
+
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-between gap-10 ">
+                    <div class="space-y-4 xl:col-span-1">
+                        <a href="pricing.html#" class="flex items-center gap-x-3">
+                            <span class="sr-only">autoproctor</span>
+                            <img
+                                    class="w-48 h-auto"
+                                    src="static/img/logo.png"
+                                    alt="Autoproctor logo"
+                            />
+                        </a>
+                        <p class="text-base text-white">© 2022, Socratease Inc. All rights reserved.</p>
+                    </div>
+                    <div class="max-w-md flex flex-wrap justify-between gap-4">
+                        <a href="terms-service.html" class="text-white hover:underline">Terms and Conditions</a>
+                        <a href="privacy-policy.html" class="text-white hover:underline">Privacy Policies and Cookies</a>
+                        <a href="https://autoproctor.freshdesk.com/" target="_blank" class="text-white hover:underline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    
+
+
+
+
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
+
+    <script src="https://cdn.autoproctor.co/static/scripts/common-functions.js?v=s8g"></script>
+
+    <script>
+        var maxSentryEvents = 6;
+        var numberOfCurrentSentryEvents = 0;
+        const byPassedErrorsDict = [{ error: "privateSpecialRepair", reason: "Chrome mobile view error"},
+            { error: "Non-Error promise rejection captured with keys", reason: ""},
+            { error: "Non-Error promise rejection captured with value", reason: "https://forum.sentry.io/t/unhandledrejection-non-error-promise-rejection-captured-with-value/14062/12"},
+            { error: "getReadModeExtract", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected"},
+            { error: "getReadModeRender", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "getReadModeConfig", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "Identifier 'isMainframe' has already been declared", reason: "Not from our codebase" },
+            { error: "runCustomize is not defined", reason: "Not from our codebase" },
+            { error: "processRandomSelector is not defined", reason: "Not from our codebase" },
+            { error: "ResizeObserver loop limit", reason: "Can be ignored: https://stackoverflow.com/questions/49384120/resizeobserver-loop-limit-exceeded" }]
+        const errorArr = byPassedErrorsDict.map(function(ped) {  return ped.error; })
+        var serverErrorsRegex = new RegExp(errorArr.join("|"), "mi");
+
+        
+            Sentry.init({
+                dsn: "https://cac61d5e1fe04b01a6409048914ff88e@o288839.ingest.sentry.io/5911954",
+                beforeSend(event) {
+                    numberOfCurrentSentryEvents++;
+                    if (numberOfCurrentSentryEvents <= maxSentryEvents) {
+                        return event;
+                    } else {
+                        return null;
+                    }
+                },
+                tracesSampleRate: 1.0,
+                environment: "production",
+                ignoreErrors: [serverErrorsRegex],
+            });
+            
+        
+
+        
+
+            window.$crisp = [];
+            window.CRISP_WEBSITE_ID = "380ff461-e7c5-4a2d-8a24-36dd7d23b74d";
+            (function (){d = document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})
+            ();
+
+            
+                $crisp.push(["set", "session:data", [[["role", "user" ]]]]);
+            
+        
+
+        window.addEventListener("load", function () {
+            if (typeof $ === "undefined") {
+                alert("There was an error connecting to the internet. We will now try reloading the page.");
+                window.location.reload();
+                return;
+            }
+
+            $("#sidebar-collapsible").on('click', function () {
+                if (!$(this).hasClass("ques-container-active")) {
+                    $(this).addClass("ques-container-active");
+                    $(this).find('.sidebar-uncollapsible-icon').hide();
+                    $(this).find('.collapsible-body').show();
+                    $(this).find(".sidebar-collapsible-icon").show();
+                } else {
+                    $(this).find('.sidebar-collapsible-icon').hide();
+                    $(this).find('.collapsible-body').hide();
+                    $(this).find(".sidebar-uncollapsible-icon").show();
+                    $("#sidebar-collapsible").removeClass("ques-container-active");
+                }
+            });
+
+            $('body').click(function(e) {
+                if (!$(e.target).closest("#account-dropdown").length && !$(e.target).closest(".dropdown-trigger").length) {
+                    $("#account-dropdown").hide();
+                }
+            });
+
+            const $staticSidebarOverlay = $('#static-sidebar--overlay');
+            const $staticSidebarContainer = $('#static-sidebar--container');
+            const $staticSidebar = $('#static-sidebar');
+
+            function toggleStaticSidebarState(state) {
+                if (state === 'on') {
+                    $staticSidebar.show();
+                    $staticSidebarOverlay.removeClass('opacity-0');
+                    $staticSidebarOverlay.addClass('opacity-100');
+                    $staticSidebarContainer.removeClass('-translate-x-full');
+                    $staticSidebarContainer.addClass('translate-x-0');
+                } else {
+                    $staticSidebar.hide();
+                    $staticSidebarOverlay.removeClass('opacity-100');
+                    $staticSidebarOverlay.addClass('opacity-0');
+                    $staticSidebarContainer.removeClass('translate-x-0');
+                    $staticSidebarContainer.addClass('-translate-x-full');
+                }
+            }
+
+
+            $('#sidebar-trigger').click(function () {
+                if ($staticSidebarContainer.hasClass('-translate-x-full')) {
+                    toggleStaticSidebarState('on');
+                } else {
+                    toggleStaticSidebarState('off');
+                }
+            })
+
+            $staticSidebarOverlay.click(function() {
+                toggleStaticSidebarState('off');
+            })
+
+            
+
+
+            
+                
+            
+
+            const upgradePlanUrl = "/account/edit-profile";
+            const upgradePlanMsg = "This feature is available only for Premium Users. Click <a href='https://www.autoproctor.co/&quot;&#32;+&#32;upgradePlanUrl&#32;+&#32;&quot;' target='_blank'>here</a> to upgrade to a Premium Plan."
+
+            $('.upgrade-premium-feature').click(function () {
+                Swal.fire({
+                    type: "info",
+                    title: "Premium Feature",
+                    html: upgradePlanMsg,
+                });
+            });
+
+            let updatePolicyVersion, acceptNewTerms;
+            
+
+            let policyTitle, policyMsg;
+            const termsOfUseUrl = "/terms-service";
+            const privacyPolicyUrl =
+            "/privacy-policy"
+
+            if (updatePolicyVersion === true) {
+                policyTitle = "Updated Terms of Use and Privacy Policy";
+                policyMsg = "We have updated our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our new Policies.";
+            } else if (acceptNewTerms === true) {
+                policyTitle = "Terms of Use and Privacy Policy";
+                policyMsg = "These are our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our Policies.";
+            }
+
+            if (updatePolicyVersion === true || acceptNewTerms === true) {
+                Swal.fire({
+                    type: "info",
+                    title: policyTitle,
+                    html: policyMsg,
+                    allowOutsideClick: false
+                }).then((result) => {
+                    if (result.value) {
+                        const url = "/account/update-policy-version/";
+                        const ajaxParams = {headers: {'X-CSRF-Token': "ImVhMjczNjA3YTg0Y2IzMWNhMDg3YzRkODRiZDBiMDJiMjVjYzkzNzci.Y1DjGA.iNs6L-hFXTYdceoy4hDY8r93VkM"}};
+                        const successRedirectUrl = window.location;
+                        makePostRequest(url, {}, successRedirectUrl, ajaxParams);
+
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+
+    <script>
+        let allPricing = {"IN": {"currencyName": "INR", "currencySymbol": "\u20b9", "plans": {"monthly": [{"displayName": "Standard", "longName": "Standard Monthly", "numTests": 150, "planLevel": 1, "planType": "standard-monthly", "price": 750, "stripeAPIId": "price_1Ia1gsJ3v3OYcLuhiizco8V7"}, {"displayName": "Premium", "longName": "Premium Monthly", "numTests": 150, "planLevel": 2, "planType": "premium-monthly", "price": 1500, "stripeAPIId": "price_1Ia1MUJ3v3OYcLuhA0FhszS0"}], "quarterly": [{"displayName": "Standard", "longName": "Standard Quarterly", "numTests": 300, "planLevel": 1, "planType": "standard-quarterly", "price": 1750, "stripeAPIId": "price_1Ia1grJ3v3OYcLuhVSv9iaSC"}, {"displayName": "Premium", "longName": "Premium Quarterly", "numTests": 300, "planLevel": 2, "planType": "premium-quarterly", "price": 3500, "stripeAPIId": "price_1Ia1MUJ3v3OYcLuhq6oJkPzr"}]}}, "US": {"currencyName": "USD", "currencySymbol": "$", "plans": {"monthly": [{"displayName": "Standard", "longName": "Standard Monthly", "numTests": 150, "planLevel": 1, "planType": "standard-monthly", "price": 10, "stripeAPIId": "price_1Ia1dnIDKZbZrM60OUabc8Wb"}, {"displayName": "Premium", "longName": "Premium Monthly", "numTests": 150, "planLevel": 2, "planType": "premium-monthly", "price": 20, "stripeAPIId": "price_1Ia1dgIDKZbZrM60jZNu7bw0"}], "quarterly": [{"displayName": "Standard", "longName": "Standard Quarterly", "numTests": 300, "planLevel": 1, "planType": "standard-quarterly", "price": 23, "stripeAPIId": "price_1Ia1dnIDKZbZrM604Me3DKUK"}, {"displayName": "Premium", "longName": "Premium Quarterly", "numTests": 300, "planLevel": 2, "planType": "premium-quarterly", "price": 46, "stripeAPIId": "price_1Ia1dgIDKZbZrM60AhiYsrH2"}]}}};
+        let countryCode = "US";
+        let subscriptionStatus = null;
+        
+        let currentCurrencySymbol = allPricing[countryCode]['currencySymbol'];
+        let currentCurrencyName = allPricing[countryCode]['currencyName'];
+        let currentCountryData = allPricing[countryCode];
+        let currentSubscriptionPeriod = "monthly";
+        let currentSubsPeriodData = currentCountryData["plans"][currentSubscriptionPeriod];
+
+        if (typeof $ === "undefined") {
+            alert("There was an error connecting to the internet. We will now try reloading the page.");
+            window.location.reload();
+        }
+
+        let $chooseCurrency = $('select#choose-currency');
+        let $pricingMonthLabel = $('.pricing-toggle__month-label');
+        let $pricingYearLabel = $('.pricing-toggle__year-label');
+        let $subscriptionPeriod = $("#subscription-period");
+        let $monthlyPriceCardsDeck = $("#monthly-price-card-deck");
+        let $quarterlyPriceCardsDeck = $("#quarterly-price-card-deck");
+        let $topUpPrice = $(".top-up-price");
+
+
+        function updateSubsPackPrice(currSubsPeriod){
+            currentSubsPeriodData = currentCountryData["plans"][currSubsPeriod];
+            let stdPackData = currentSubsPeriodData[0];
+            let prePackData = currentSubsPeriodData[1];
+            $(`#price-card__cost-${currSubsPeriod}-standard`).text(currentCurrencySymbol + stdPackData.price);
+            updateBtnLink(currentSubsPeriodData, stdPackData.planType, $(`#price-card__btn-${currSubsPeriod}-standard`))
+            $(`#price-card__cost-${currSubsPeriod}-premium`).text(currentCurrencySymbol + prePackData.price);
+            updateBtnLink(currentSubsPeriodData, prePackData.planType, $(`#price-card__btn-${currSubsPeriod}-premium`))
+        }
+
+        function updateBtnLink(currentSubsPeriodData, currPlanType, cardBtn) {
+            let urlValue = cardBtn.prop("href");
+            let linkString = new URL(urlValue);
+            let priceCardBtnPrams = new URLSearchParams(linkString.search);
+            if (priceCardBtnPrams.has("planType")) {
+                priceCardBtnPrams.set('planType', currPlanType);
+                priceCardBtnPrams.set('currency', currentCurrencyName);
+            }else {
+                priceCardBtnPrams.set('currency', currentCurrencyName);
+            }
+            cardBtn.prop("href", linkString.origin + linkString.pathname + "?" + priceCardBtnPrams)
+        }
+
+        function updateTopUpPrice(currCountryCode) {
+            let topUpCost = currCountryCode === 'US' ? '$10' : '₹750';
+            $topUpPrice.text(topUpCost)
+        }
+
+        $subscriptionPeriod.click(function(){
+            if($(this).prop("checked") === true){
+                currentSubscriptionPeriod = "quarterly";
+                $pricingMonthLabel.removeClass("pricing-toggle__period-label--selected", 1000);
+                $pricingYearLabel.addClass("pricing-toggle__period-label--selected", 1000);
+                if(!subscriptionStatus){
+                    updateSubsPackPrice(currentSubscriptionPeriod);
+                }
+                $monthlyPriceCardsDeck.hide();
+                $quarterlyPriceCardsDeck.show();
+            }else {
+                currentSubscriptionPeriod = "monthly";
+                $pricingMonthLabel.addClass("pricing-toggle__period-label--selected", 1000);
+                $pricingYearLabel.removeClass("pricing-toggle__period-label--selected", 1000);
+                if(!subscriptionStatus){
+                    updateSubsPackPrice(currentSubscriptionPeriod);
+                }
+                $quarterlyPriceCardsDeck.hide();
+                $monthlyPriceCardsDeck.show();
+
+            }
+        })
+
+        $chooseCurrency.change(function () {
+            countryCode = $(this).val();
+            currentCountryData = allPricing[countryCode];
+            currentCurrencySymbol = allPricing[countryCode]['currencySymbol'];
+            currentCurrencyName = allPricing[countryCode]['currencyName'];
+            updateSubsPackPrice(currentSubscriptionPeriod);
+            updateTopUpPrice(countryCode)
+        });
+
+        $(document).ready(function() {
+            // $('.tooltipped').tooltip();
+            $(".collapsible__elem").on('click', function () {
+                if (!$(this).hasClass("ques-container-active")) {
+                    $(this).addClass("ques-container-active");
+                    $(this).find('.uncollapse').hide(); $(this).find('.collapsible-body').show();
+                    $(this).find(".collapse").show();
+                } else {
+                    $(this).find('.collapse').hide(); $(this).find('.collapsible-body').hide();
+                    $(this).find(".uncollapse").show();
+                    $(this).removeClass("ques-container-active");
+                }
+            });
+            $chooseCurrency.val(countryCode);
+
+            updateTopUpPrice(countryCode);
+        })
+    </script>
+
+
+</body>
+</html>

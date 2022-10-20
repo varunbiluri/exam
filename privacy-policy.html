@@ -1,0 +1,931 @@
+
+
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="shortcut icon" href="https://cdn.autoproctor.co/static/img/favicon.png"/>
+        
+            <script
+                    src="https://browser.sentry-cdn.com/5.17.0/bundle.min.js"
+                    integrity="sha384-lowBFC6YTkvMIWPORr7+TERnCkZdo5ab00oH5NkFLeQUAmBTLGwJpFjF6djuxJ/5"
+                    crossorigin="anonymous"
+            ></script>
+        
+        
+
+        <title>AutoProctor: Privacy Policy </title>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
+          
+    
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.css"
+            rel="stylesheet"
+    />
+    
+        <link rel="stylesheet" href="https://cdn.autoproctor.co/static/style/main-style.min.css?v=2.2"/>
+    
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .soc-breadcrumb {
+                @apply hidden;
+            }
+
+            .test-admin-primary-sidebar {
+                @apply -mt-px;
+            }
+
+            audio, canvas, iframe, img, object, video {
+                display: unset !important;
+            }
+
+            .soc-main-layout {
+                font-family: "Roboto", serif !important;
+            }
+
+            .ap-login-btn {
+                @apply py-3 px-9;
+            }
+
+            .ap-lp-hero {
+                @apply p-0;
+            }
+
+            .ap-login-btn > span {
+                @apply ml-2.5;
+            }
+
+            .non-footer-content {
+                flex: 1 0 auto;
+            }
+
+
+        
+            #nav-logo {
+                left: 0;
+                /* margin-left: 152px; */
+            }
+        
+
+            .sidenav li > a:hover {
+                @apply bg-transparent;
+            }
+        }
+    </style>
+
+
+    <style>
+    </style>
+
+
+    
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                                });
+                        }
+
+                        ((p = t.createElement("script")).type = "text/javascript"),
+                            (p.async = !0),
+                            (p.src = s.api_host + "/static/array.js"),
+                            (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
+                                    " "
+                                ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("Asio7_Oj3Io9h2WMlLHxMHrsHdiMv_NdVF9WXKbVQUo", {api_host: "https://app.posthog.com"});
+            
+        </script>
+    
+
+    <script>
+        var gaIsAvailable = false;
+    </script>
+    
+        <script type="text/javascript">
+            gaIsAvailable = true;
+            var gaID = "UA-165591693-1";
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', gaID, 'auto');
+            
+            ga('send', 'pageview');
+        </script>
+
+    
+</head>
+
+<body class="flex min-h-screen flex-col">
+<div class="non-footer-content">
+    
+        
+            <div class="navbar-fixed fixed z-30 w-full px-4 lg:px-14 bg-gradient-to-r from-[#363FB5] to-[#00A36D] shadow-lg" id="navbar-container">
+                <nav class="relative py-2.5 max-w-7xl nav-content mx-auto">
+                    <div class="flex items-center justify-between flex-row">
+                        <div class="nav_left_half flex flex-row-reverse items-center justify-end w-full gap-4 md:w-auto">
+                            <a href="account/logout.html" class="flex items-center gap-x-3" id="nav-logo">
+                                <span class="sr-only">autoproctor</span>
+                                <img
+                                        class="w-auto h-6"
+                                        src="https://cdn.autoproctor.co/static/img/icons/ap-logo.svg"
+                                        alt=""
+                                />
+                                <span class="text-2xl text-white font-montserrat">AutoProctor</span>
+                            </a>
+                            
+
+                                <button
+                                        type="button"
+                                        class="flex items-center -mr-2 md:hidden sidenav-trigger inline-flex items-center justify-center p-2 text-white rounded-md hover:text-gray-200 focus:outline-none ph-no-capture"
+                                        id="sidebar-trigger"
+
+                                >
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg
+                                            class="w-6 h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            aria-hidden="true"
+                                    >
+                                        <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2.5"
+                                                d="M4 6h16M4 12h16M4 18h16"
+                                        />
+                                    </svg>
+                                </button>
+
+                            
+                        </div>
+
+                        <div id="nav-right-half" class="items-center hidden gap-8 md:flex">
+                            <ul class="dropdown-content hidden absolute top-12 right-8 bg-white text-center text-emerald-600 shadow-lg rounded py-1.5 space-y-2" id="account-dropdown" style="min-width: 150px;z-index: 100;">
+                                
+                                <li><a class="hover:underline ph-no-capture" href="account/logout.html">Logout</a></li>
+                            </ul>
+
+                            <ul class="right flex items-center md:space-x-6">
+                                
+
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="pricing" href="pricing.html">Pricing</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="faqs" href="faqs.html">FAQs</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a href="https://help.autoproctor.co/">Help</a></li>
+                                    
+                                        <li class="inline-flex">
+                                            <a
+                                                    href="account/login/index.html"
+                                                    class="inline-flex items-center py-2.5 text-lg font-medium text-white bg-white border border-transparent rounded-full bg-opacity-30 px-9 hover:bg-opacity-50 transition-all ease-in duration-200 font-roboto"
+                                            >
+                                                SIGN IN
+                                                <span class="ml-2">
+                                                <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="w-[18px] h-[18px]"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                        stroke-width="2.5"
+                                                >
+                                                <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M9 5l7 7-7 7"
+                                                />
+                                                </svg>
+                                            </span>
+                                            </a>
+                                        </li>
+                                    
+                                
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+
+        
+            
+    <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true" style="display: none" id="static-sidebar">
+        <div class="fixed inset-0 bg-gray-600 bg-opacity-75 opacity-0"  id="static-sidebar--overlay"  aria-hidden="true"></div>
+        <div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-200 -translate-x-full" id="static-sidebar--container">
+
+
+
+
+
+
+
+
+
+
+            <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                <nav class="px-4 mt-4 space-y-1 text-indigo-700 text-lg font-medium">
+                    
+
+                    
+
+
+                    <a href="https://help.autoproctor.co/how-to-add-timer-proctor-google-forms/" target="_blank" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        How it works
+                    </a>
+
+                    <a href="pricing.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        Pricing
+                    </a>
+
+                    <a href="faqs.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        FAQs
+                    </a>
+
+                    <a href="https://help.autoproctor.co/" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        Support
+                    </a>
+
+                    
+                        <a href="account/login/index.html" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg>
+                            Login
+                        </a>
+                    
+                </nav>
+            </div>
+        </div>
+
+        <div class="flex-shrink-0 w-14" aria-hidden="true">
+            <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+    </div>
+
+        
+    
+
+    <div class="page-container">
+        <div class="content">
+            
+
+    <div class="2xl:max-w-7xl lg:max-w-5xl md:max-w-3xl max-w-xl mx-auto w-full px-9 mt-28 mb-20">
+        <div class="text-center font-family-ibm-plex space-y-4 sm:text-base text-sm leading-5">
+            <p class="uppercase"><strong class="font-bold">SOCRATEASE, INC.</strong></p>
+            <p class="uppercase"><strong class="font-bold">PRIVACY POLICY</strong></p>
+            <p>Last Updated: June 18, 2021 (v2.0)</p>
+        </div>
+        <ol class="list-decimal font-family-ibm-plex sm:text-base text-sm leading-5">
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">INTRODUCTION</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify"><strong class="font-bold">Socratease, Inc. </strong>("Socratease", "<span class="underline">we</span>," "<span class="underline">us</span>," or "<span class="underline">our</span>") respects the privacy of its Users ("<span class="underline">User</span>," "<span class="underline">your</span>," or "<span class="underline">you</span>"). This Privacy Policy (the "<span class="underline">Privacy Policy</span>") explains how we collect, use, disclose, and safeguard your information when you use our product AutoProctor (the "<span class="underline">Platform</span>") through Socratease's website at <a class="text-main-skyBlue" href="https://www.autoproctor.co/www.autoproctor.co">www.autoproctor.co</a> (the "<span class="underline">Website</span>") or AutoProctor's mobile application (the "<span class="underline">App</span>").</p>
+                    <p>IF YOU ARE UNDER THE AGE OF 18, WE REQUIRE YOU TO PROVIDE US WITH THE CONSENT OF YOUR PARENTS OR LEGAL GUARDIANS TO ALLOW YOU TO USE OUR PLATFORM. WE REQUIRE SCHOOLS, TEACHERS, AND TESTING INSTITUTIONS TO PROVIDE US PARENTAL CONSENT BEFORE THEY ASK A STUDENT OR TEST TAKER UNDER 18 TO USE AUTOPROCTOR. </p>
+                    <p class="text-justify">We are committed to protecting the privacy of our Users whose information is collected and stored while using AutoProctor.</p>
+                    <p class="text-justify">The capitalized terms have the same meaning as ascribed in our <a class="text-main-skyBlue" href='terms-service.html' target='_blank'>Terms of Service</a> as applicable, unless otherwise noted here.</p>
+                    <p class="text-justify">PLEASE READ THIS PRIVACY POLICY CAREFULLY TO UNDERSTAND OUR POLICIES AND PRACTICES REGARDING YOUR INFORMATION AND HOW WE WILL TREAT IT. BY ACCESSING OR USING OUR WEBSITE, APP, AND PLATFORM, YOU AGREE TO ACCEPT ALL THE TERMS CONTAINED IN THIS PRIVACY POLICY AND ACKNOWLEDGE AND AGREE WITH THE PRACTICES DESCRIBED HEREIN. IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS AND USE OUR WEBSITE, APP, AND PLATFORM.</p>
+                    <p class="text-justify">IF YOU HAVE ANY QUESTIONS REGARDING THIS PRIVACY POLICY, PLEASE SEND US AN EMAIL AT  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>PRIVACY@AUTOPROCTOR.CO</a>.</p>
+                    <p class="text-justify"><strong class="font-bold">WE DO NOT SELL YOUR PERSONAL INFORMATION, NOR DO WE INTEND TO DO SO</strong>. WE DO NOT GIVE ACCESS TO YOUR PERSONAL INFORMATION TO THIRD PARTIES EXCEPT TO SUBPROCESSORS TO ASSIST US IN THE PROVISION OF OUR SERVICES TO YOU. </p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">WHAT INFORMATION DO WE COLLECT?</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">When you register to use our Website, App, or Platform, we collect personal information (also referred to as personally identifiable information or "<span class="underline">PII</span>") which may include your name, online contact information such as your email address or username, phone number, and other personal information like photograph, audio file, and video file. The information so collected will be stored on our servers. </p>
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                        <li><span class="underline">Geolocation and Equipment Information</span>.  We may collect information that does not personally identify you such as (i) your geolocation, and (ii) information about your internet connection, the equipment you use to access our Website, App, or Platform, and usage details.</li>
+                        <li><span class="underline">Financial Information</span>. We currently do not collect or store any credit cards or bank information, as we are using a third-party payment processor.  However, we will update this Privacy Policy when we start using and storing such information. We will also inform you via reasonable means if we start collecting such information from you.</li>
+                    </ol>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">HOW DO WE COLLECT INFORMATION?</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">We collect personal information from you in the following ways:</p>
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                        <li>At registration on our Website, App, or Platform; </li>
+                        <li>In email, text, and other electronic messages between you and our Website, App, or Platform;</li>
+                        <li>From you placing an order, which includes details of transactions you carry out on our Website, App, or Platform;</li>
+                        <li>From your responses to a survey; </li>
+                        <li>From forms filled out by you; </li>
+                        <li>From our integrated SAAS tool to your website;</li>
+                        <li>From records or copies of correspondences (including email addresses) if you contact us; </li>
+                        <li>Captured live images through the web camera and screen-sharing;</li>
+                        <li>From search queries on our App, or Platform; and</li>
+                        <li>When you post information to be published or displayed on our Website, App, or Platform. </li>
+                    </ol>
+                    <p class="text-justify">We collect information from you automatically when you navigate through our Website, App, or Platform in the following ways:</p>
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                        <li>Usage details; </li>
+                        <li>IP addresses; </li>
+                        <li>Information obtained through browser cookies; and </li>
+                        <li>Other tracking technologies. </li>
+                    </ol>
+
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">HOW DO WE USE YOUR INFORMATION?</strong>
+                <p class="text-justify my-4">We use the information that you provide to:</p>
+                <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                    <li>Personalize your experience in using our Platform; </li>
+                    <li>Provide you with information, products, or services requested from us;</li>
+                    <li>Present our Website, App, and Platform and their contents to you;</li>
+                    <li>Provide you with notices about account and/or subscription, including expiration and renewal notices;</li>
+                    <li>Carry out obligations and enforce rights arising from contracts entered into between you and us, including billing and collection; </li>
+                    <li>Notify you about changes to our Website, App, and Platform and any products or services; </li>
+                    <li>Allow you to participate in interactive features on our Website, App, and Platform; </li>
+                    <li>Improve the Website, App, and Platform; </li>
+                    <li>Improve our customer service;</li>
+                    <li>Administer surveys </li>
+                    <li>Process transactions;</li>
+                    <li>Contact you for other purposes with your consent;</li>
+                    <li>Contact you about our products and services that may be of interest; and</li>
+                    <li>Send you periodic emails, in accordance with the CAN-SPAM Act of 2003 as detailed in <span class="underline">Section 17</span>, via the email address provided by you to (i) send information, respond to inquiries, and/or other requests or questions; (ii) process orders and send information and updates pertaining to such orders; (iii) send additional information related to your product and/or service; and (iv) market to our mailing list or continue to send email to you after the original transaction has occurred. </li>
+                </ol>
+
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">OUR COOKIE POLICY</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">Cookies are small pieces of text used to store information on web browsers. Cookies are used to store and receive identifiers and other information on computers, phones, and other devices. Other technologies, including data we store on your web browser or device, identifiers associated with your device, and other software, are used for similar purposes. In this Privacy Policy, we refer to all of these technologies as "<span class="underline">Cookies</span>." </p>
+                    <p class="text-justify">We use Cookies on our Website and App to (a) compile aggregate data about site traffic and site interactions in order to offer better site experiences and tools in the future, and (b) allow trusted third-party services that track this information on our behalf.  You can set your browser to refuse all or some browser Cookies, but it may affect your user experience. We honor Do Not Track signals and, if one is in place, we will not track, plant cookies, or use advertising. </p>
+                    <p class="text-justify">We allow third party behavioral tracking and links to third-party web pages.  Occasionally, at our discretion, we may include or offer third-party products or services on our Website, App, or Platform.  These third-party sites have separate and independent privacy policies.  We, therefore, have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our Website, App, or Platform and welcome any feedback about these sites.  Please contact us at  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a>.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">HOW DO WE PROTECT INFORMATION WE COLLECT?</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">Our Website and App receive regular security scans and penetration tests.  Our Website and App also receive regular malware scans.  In addition, our Website and App use an SSL certificate as an added security measure. We require username and passwords for our employees who can access your personal information that we store and/or process on our Platform and servers. In addition, we actively prevent third parties from getting access to your personal information that we store and/or process on our Platform and servers.  We accept payment by credit card through a third party credit card processor on our behalf.  We will implement reasonable security measures every time you (a) place an order, or (b) enter, submit, or access your information, (c) register, or (d) access our Platform, on our Website and App.  </p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">DATA SECURITY MEASURES.</strong>
+                <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                    <li><span class="underline">Security Measures</span>.  We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure. All information you provide to us is stored on our secure servers behind firewalls.  The safety and security of your information also depends on you. Where we have given you (or where you have chosen) a password for access to certain parts of our Website, App, or Platform, you are responsible for keeping this password confidential. We ask you not to share your password with anyone. Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our Website, App, or Platform. Any transmission of personal information is at your own risk. We are not responsible for circumvention of any privacy settings or security measures contained on our Website, App, or Platform. </li>
+                    <li><span class="underline">Fair Information Practice Principles</span>.  In the event of a personal data breach, we will notify you within seventy-two (72) hours via (i) email and/or (ii) our Platform notification system on our Website and/or App.  We agree to the individual redress principle, which requires that individuals have a right to pursue legally enforceable rights against data collectors and processors who fail to adhere to the law. This principle requires not only that individuals have enforceable rights against data users, but also that individuals have recourse to courts or a government agency to investigate and/or prosecute non-compliance by data processors.</li>
+                </ol>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">DISCLOSURE OF PERSONAL INFORMATION</strong>
+                <div class="mt-4 space-y-4">
+                    <p>There are times when we may share Personal Information, which you have shared with us, with others to enable us to provide you over Services, including contractors, service providers, and third parties ("<span class="underline">Partners</span>"). This section discusses only how Socratease may share such information with Partners. We will ensure that our Partners protect your Personal Information. The following describe how and with whom we may share your Personal Information: </p>
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4 space-y-4">
+                        <li class="space-y-4"><p class="text-justify"><strong class="font-bold">Disclosure of Personal Information. </strong></p>
+                            <p class="text-justify">We may only disclose personal information as described in this Privacy Policy or your consent. </p>
+                        </li>
+                        <li class="space-y-4">
+                            <p class="text-justify"><strong class="font-bold">Other Disclosure of Personal Information. </strong></p>
+                            <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4 space-y-4">
+                                <li>We will disclose personal information (i) to comply with any court order, law, or legal process, including to respond to any government or regulatory request, (ii) to enforce or apply our <a class="text-main-skyBlue" href='terms-service.html' target='_blank'>Terms of Service</a> and other agreements, including for billing and collection purposes, (iii) if we believe it is necessary or appropriate to protect the rights, property, or safety of Socratease, our customers or others, and/or (iv) if it is necessary or appropriate to protect the rights, property, or safety of Socratease, our customers, or others, and this includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction.</li>
+                                <li>We may disclose information of your exam session to your educational institution/test administrator/organization upon request. This information includes, but is not restricted to, video and audio recording, images taken via your camera, your device information, your IP Address, etc. We do this so that your educational institution/certifying entity can verify that you were the person taking the exam and that no exam protocols were violated.</li>
+                            </ol>
+                        </li>
+                        <li class="space-y-4">
+                            <p class="text-justify"><strong class="font-bold">Third Party Disclosure.</strong></p>
+                            <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4 space-y-4">
+                                <li>We do not sell, trade, rent, or otherwise transfer personal information to others, unless we provide you with advance notice.  This does not include our hosting partners and other parties who assist us in operating our Website, App, or Platform, conducting our business, or servicing you, so long as those parties agree to keep this information confidential.  </li>
+                                <li>We do not provide non-personally identifiable visitor information for marketing purposes. </li>
+                            </ol>
+
+                        </li>
+                        <li class="space-y-4">
+                            <p class="text-justify"><strong class="font-bold">Choices Users Have About How Socratease Uses and Discloses Information. </strong></p>
+                            <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4 space-y-4">
+                                <li><span class="underline">Tracking Technologies and Advertising</span>. You can set their browser to refuse some or all the browser cookies, but if you disable or refuse cookies, some parts of our Website may not be accessible or function properly. </li>
+
+                            </ol>
+
+                        </li>
+                    </ol>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto"><strong class="font-bold">DATA RETENTION POLICIES</strong>
+                These policies are applicable to you and your tests after you have accepted the current version of the Privacy Policy. We categorise the data we record and store into:
+                <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                    <li><u>Audio and Visual PII:</u> Files like audio recordings and photos and screenshots of the test-taker and the test-taker's environment. We retain such data for a maximum of 3 months on our servers.</li>
+                    <li><u>Test Session Metadata:</u> Metadata about the Audio and Visual PII. These constitute the events based on which the Trust Score is calculated. (For example, User 42 switched to a different tab at 12.24 PM on 12th April, 2021 while taking Test 23.). We retain such data for a maximum of 4 months on our servers.</li>
+                </ol>
+
+            </li>
+
+            <li class="my-10 mx-auto"><strong class="font-bold">GOOGLE ANALYTICS</strong>
+                <div class="mt-4 space-y-4">
+                    <p>Google, as a third-party vendor, uses Cookies to serve advertisements to Users on our Website, App, and Platform. Google uses first-party Cookies, such as Google Analytics Cookies, to compile data regarding User interactions with ad impressions and other ad service functions as they relate to our Platform. We currently use Google Analytics to collect and process certain Website and App usage data. To learn more about Google Analytics and how to opt-out, please visit <a class="text-main-skyBlue" href="https://policies.google.com/privacy/google-partners" target="_blank" rel="noopener">https://policies.google.com/privacy/google-partners</a>. </p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">FOR OUR EUROPEAN CUSTOMERS AND VISITORS</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">We are headquartered in the United States of America. Most of our operations are located in the United States and India. Your Personal Information, which you give to us during registration or use of our Website, App or Platform, may be accessed by, transferred to, stored by, or processed by us in India and/or the US.  Our servers or our third-party hosting services partners are located in the United States/India.  By using our site, you consent to any transfer of your Personal Information out of Europe, UK, or Switzerland for processing in the US or other countries. </p>
+
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                        <li>We will comply with the EU Standard Contractual Clauses with respect to the transfer of Personal Data from the EU to the India and/or US for processing. If there is any conflict between the terms and conditions in this Privacy Policy and your rights under the EU Standard Contractual Clauses, the terms and conditions in the EU Standard Contractual Clauses will govern. For the purposes of this Privacy Policy, "<span class="underline">EU Standard Contractual Clauses</span>" mean the standard contractual clauses for the transfer of personal data to processors established in the US. (Commission Decision 2010/87/EC).</li>
+                        <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4 space-y-4">
+                            <li class="mt-4">
+                                <span class="underline">Obligations of the data importer (processors)</span>
+                                <p class="text-justify my-4">The data importer agrees and warrants:</p>
+                                <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4 space-y-4">
+                                    <li>to process the personal data only on behalf of the data exporter and in compliance with its instructions and the Clauses; if it cannot provide such compliance for whatever reasons, it agrees to inform promptly the data exporter of its inability to comply, in which case the data exporter is entitled to suspend the transfer of data and/or terminate the contract;</li>
+                                    <li>that it has no reason to believe that the legislation applicable to it prevents it from fulfilling the instructions received from the data exporter and its obligations under the contract and that in the event of a change in this legislation which is likely to have a substantial adverse effect on the warranties and obligations provided by the Clauses, it will promptly notify the change to the data exporter as soon as it is aware, in which case the data exporter is entitled to suspend the transfer of data and/or terminate the contract;</li>
+                                    <li>that it has implemented the technical and organizational security measures before processing the personal data transferred;</li>
+                                    <li>that it will promptly notify the data exporter about:
+                                        <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                                            <li>any legally binding request for disclosure of the personal data by a law enforcement authority unless otherwise prohibited, such as a prohibition under criminal law to preserve the confidentiality of a law enforcement investigation,</li>
+                                            <li>any accidental or unauthorized access, and</li>
+                                            <li>any request received directly from the data subjects without responding to that request, unless it has been otherwise authorized to do so;</li>
+                                            <li>to deal promptly and properly with all inquiries from the data exporter relating to its processing of the personal data subject to the transfer and to abide by the advice of the supervisory authority with regard to the processing of the data transferred;</li>
+                                            <li>at the request of the data exporter to submit its data processing facilities for audit of the processing activities covered by the Clauses which shall be carried out by the data exporter or an inspection body composed of independent members and in possession of the required professional qualifications bound by a duty of confidentiality, selected by the data exporter, where applicable, in agreement with the supervisory authority;</li>
+                                            <li>to make available to the data subject upon request a copy of the Clauses, or any existing contract for sub-processing, unless the Clauses or contract contain commercial information, in which case it may remove such commercial information, with the exception of Appendix 2 which shall be replaced by a summary description of the security measures in those cases where the data subject is unable to obtain a copy from the data exporter;</li>
+                                            <li>that, in the event of sub-processing, it has previously informed the data exporter and obtained its prior written consent;</li>
+                                            <li>that the processing services by the sub-processor will be carried out in accordance with Clause 11;</li>
+                                            <li>to send promptly a copy of any sub-processor agreement it concludes under the Clauses to the data exporter.</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+
+                            </li>
+
+                            <li>
+                                <span class="underline">Obligations of the data exporter</span>
+                                <p class="text-justify my-4">The data exporter agrees and warrants:</p>
+                                <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                                    <li>that the processing, including the transfer itself, of the personal data has been and will continue to be carried out in accordance with the relevant provisions of the applicable data protection law (and, where applicable, has been notified to the relevant authorities of the Member State where the data exporter is established) and does not violate the relevant provisions of that State;</li>
+                                    <li>that it has instructed and throughout the duration of the personal data processing services will instruct the data importer to process the personal data transferred only on the data exporter's behalf and in accordance with the applicable data protection law and the Clauses;</li>
+                                    <li>that the data importer will provide sufficient guarantees in respect of the technical and organizational security measures;</li>
+                                    <li>that after assessment of the requirements of the applicable data protection law, the security measures are appropriate to protect personal data against accidental or unlawful destruction or accidental loss, alteration, unauthorized disclosure or access, in particular where the processing involves the transmission of data over a network, and against all other unlawful forms of processing, and that these measures ensure a level of security appropriate to the risks presented by the processing and the nature of the data to be protected having regard to the state of the art and the cost of their implementation;</li>
+                                    <li>that it will ensure compliance with the security measures;</li>
+                                    <li>that, if the transfer involves special categories of data, the data subject has been informed or will be informed before, or as soon as possible after, the transfer that its data could be transmitted to a third country not providing adequate protection within the meaning of Directive 95/46/EC;</li>
+                                    <li>to make available to the data subjects upon request a copy of the Clauses, with a summary description of the security measures, as well as a copy of any contract for sub-processing services which has to be made in accordance with the Clauses, unless the Clauses or the contract contain commercial information, in which case it may remove such commercial information; and </li>
+                                    <li>that, in the event of sub-processing, the processing activity is carried out in at least the same level of protection for the personal data and the rights of the data subject as the data importer under the Clauses.</li>
+                                </ol>
+                            </li>
+
+                            <li>
+                                <span class="underline">Liability</span>
+                                <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                                    <li>The parties agree that any data subject, who has suffered damage as a result of any breach of the obligations referred above by any party or sub-processor is entitled to receive compensation from the data exporter for the damage suffered.</li>
+                                    <li>If a data subject is not able to bring a claim for compensation in accordance with paragraph a against the data exporter, arising out of a breach by the data importer or his sub-processor of any of their obligations referred to above, because the data exporter has factually disappeared or ceased to exist in law or has become insolvent, the data importer agrees that the data subject may issue a claim against the data importer as if it were the data exporter, unless any successor entity has assumed the entire legal obligations of the data exporter by contract of by operation of law, in which case the data subject can enforce its rights against such entity.</li>
+                                    <li>If you are a resident of or a visitor to Europe, you have certain rights with respect to the processing of your Personal Data, (referred here as Personal Information), as defined in the GDPR.</li>
+                                    <li>Please note that in some circumstances, we may not be able to fully comply with your request, or we may ask you to provide us with additional information in connection with your request, which may be Personal Information, for example, if we need to verify your identity or the nature of your request. It may also be because the request may interfere with the purpose of AutoProctor. For instance, if you request that we delete all information related to your exam session, we will need to contact your Testing Institution to verify that there were no violations or other issues during your testing processOnce they verify and confirm, we shall process your request to delete information.</li>
+                                    <li>In such situations, however, we will still respond to let you know of our decision. As used herein, "<span class="underline">Personal Information</span>" means any information that identifies you as an individual, such as name, address, email address, IP address, phone number, business address, business title, business email address, company, etc. </li>
+                                    <li>To make any of the following requests, please contact us (i) via email at  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a>, or (ii) by writing to us at Socratease, Inc., 21536 Saratoga Heights Dr., Saratoga, California 95070, United States.
+                                        <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                                            <li><span class="underline"><strong class="font-bold">Access</strong></span><strong class="font-bold">:</strong> You can request more information about the Personal Information we hold about you. You can also request a copy of the Personal Information.</li>
+                                            <li><span class="underline"><strong class="font-bold">Rectification</strong></span>: If you believe that any Personal Information we are holding about you is incorrect or incomplete, you can request that we correct or supplement such data. Please contact us as soon as possible upon noticing any such inaccuracy or incompleteness.</li>
+                                            <li><span class="underline"><strong class="font-bold">Objection</strong></span><strong class="font-bold">: You can contact us to let us know that you object to the collection or use of your Personal</strong> Information for certain purposes.</li>
+                                            <li><span class="underline"><strong class="font-bold">Erasure</strong></span><strong class="font-bold">:</strong> You can request that we erase some or all of your Personal Information from our systems.</li>
+                                            <li><span class="underline"><strong class="font-bold">Restriction of Processing</strong></span>: You can ask us to restrict further processing of your Personal Information.</li>
+                                            <li><span class="underline"><strong class="font-bold">Portability</strong></span>: You have the right to ask for a copy of your Personal Information in a machine-readable format. You can also request that we transmit the data to another entity where technically feasible.</li>
+                                            <li><span class="underline"><strong class="font-bold">Withdrawal of Consent</strong></span>: If we are processing your Personal Information based on your consent (as indicated at the time of collection of such data), you have the right to withdraw your consent at any time. Please note, however, that if you exercise this right, it may limit your ability to use some/ all of our Services or Platform and you may have to then provide express consent on a case-by-case basis for the use or disclosure of certain of your Personal Information, if such use or disclosure is necessary to enable you to utilize some or all of our Services and Platform.</li>
+                                            <li><span class="underline"><strong class="font-bold">Right to File Complaint</strong></span>: You have the right to lodge a complaint about our practices with respect to your Personal Information with the supervisory authority of your country or EU Member State. Please go to <a class="text-main-skyBlue" href="https://ec.europa.eu/justice/article-29/structure/data-protection-authorities/index_en.htm" target="_blank" rel="noopener">https://ec.europa.eu/justice/article-29/structure/data-protection-authorities/index_en.htm</a> to locate your Data Protection Authority.</li>
+                                            <li><span class="underline"><strong class="font-bold">Response.</strong></span> We will respond to your inquiry within thirty (30) days of the receipt. </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </ol>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">FOR OUR CANADIAN USERS</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">This Section supplements the information contained in our Privacy Policy above and applies solely to all visitors, users, and others to our Website, App, or Platform, who reside in Canada ("<span class="underline">consumers</span>" or "<span class="underline">you</span>"). We comply with the Personal Information Protection and Electronics Document Act of 2000 ("<span class="underline">PIPEDA</span>") and any terms defined in the PIPEDA have the same meaning when used in this Section. </p>
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                        <li><span class="underline">Definition of Personal Information</span>.  Any information about an identifiable individual. Whatever may be the physical form or characteristics of a particular regime for "business contact information" (name, position, title, address, professional phone number, etc.) </li>
+                        <li><span class="underline">Right to Access Personal Information</span>.  You can request to access your personal information we hold about you. We will first confirm whether you have requested such information, explain how we have used your information, provide a list of names with whom your information has been shared and provide a copy of your information in an accessible format and make alternative formats available if requested. </li>
+                        <li><span class="underline">Right to be Forgotten</span>.  Your information will be kept with us for as long as it is required for the fulfillment of the purposes of our AutoProctor Platform. Unless we otherwise give you notice, we will retain your Information on our AutoProctor Platform on your behalf until such times as you or we terminate your User Account.</li>
+                        <li><span class="underline">Data Breach Notification</span>.  We will send a notification to you as soon as feasible regarding the information of any breach that creates a "real risk of significant harm" to you. We keep a record of every data breach and, on request, provide the Office of the Privacy Commissioner with access to the record. </li>
+                        <li><span class="underline">Canadian Privacy Officer</span>.  We have appointed a Canadian Privacy and Data Protection Officer, Jayanth Neelakanta at  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a>, to make sure the privacy rights of our Canadian users are protected in compliance with PIPEDA.  </li>
+                        <li><span class="underline">Two Factor Authentication</span>. You may enable two-factor authentication on your account to help ensure that only you can access your account. If you do, in addition to entering your password to log in to your account to access the AutoProctor Platform, we will send a code to your mobile number, which you will need to enter. This added security prevents anyone else from accessing your AutoProctor account unless they have access to your login information.</li>
+                        <li><span class="underline">Contact Information</span>. You may contact us (i) at  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a>, or (ii) by writing to us at Jayanth Neelakanta, at 21536 Saratoga Heights Dr., Saratoga, California 95070, United States to (i) make a Personal Information Request, (ii) correct your personal information, (iii) discuss our Privacy Policy and/or anything that has to do with it. We will respond within thirty (30) calendar days of receiving such a request or query. Additionally, in order for us to respond to your request or query, we will need to collect information from the requesting party to verify their identity.</li>
+                    </ol>
+                </div>
+
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">YOUR CALIFORNIA PRIVACY RIGHTS</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">AutoProctor does not sell, trade, or otherwise transfer to outside third parties your "<span class="underline">Personal Information</span>" as the term is defined under the California Civil Code Section &sect; 1798.82(h).  Additionally, California Civil Code Section &sect; 1798.83 permits Users of our Website, App, or Platform that are California residents to request certain information regarding our disclosure of their Personal Information to third parties for their direct marketing purposes. To make a request for such disclosure, please send an email to  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a> or write us at Socratease, Inc., 21536 Saratoga Heights Dr., Saratoga, California 95070, United States.</p>
+                    <p class="text-justify">If you would like to discuss our Personal Information storage and processing process with us, please send us an email at <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a> or write us at Socratease, Inc., 21536 Saratoga Heights Dr., Saratoga, California 95070, United States.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">STUDENT ONLINE PERSONAL INFORMATION PROTECTION ACT (UNDER 18 USERS ONLY)</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">The Student Online Personal Information Protection Act ("<span class="underline">SOPIPA</span>") is a California legislation that protects the privacy of K-12 students under the age of eighteen (18). Under SOPIPA, we do not use any of the personally identifiable information (PII) of students under 18 collected while using our Platform to send them any marketing or targeted advertising.</p>
+                    <p class="text-justify">In compliance with SOPIPA, all of the collected PII is used only to improve, develop, maintain, and support the Website, App, and Platform.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">FAMILY EDUCATIONAL RIGHTS AND PRIVACY ACT</strong>
+                <div class="mt-4 space-y-4">
+                    <p>Family Educational Rights and Privacy Act ("<span class="underline">FERPA</span>") is a federal legislation that protects the privacy of students education records. FERPA applies to a variety of information that directly relates to the student and is maintained by the educational institution or an outside agency such as Socratease. We handle all student data in compliance with FERPA regulations.</p>
+                    <p>While not all collected information is to be treated with the same scrutiny, an educational record, such as a course name, assessment grades or audio and video sessions of a proctored exam, are highly protected.</p>
+                    <p>Socratease's privacy policy is designed to be compliant with FERPA. If you would like to know more about our practices, or make a request to inspect, review or amend an education record, please send an email to  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a>.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">PROTECTION OF PUPIL'S RIGHTS ACT </strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">The Protection of Pupil's Rights Act("<span class="underline">PPRA</span>") is a federal legislation that gives parents and students who are enrolled in any program funded by the U.S. Department of Education, the right to protect their informational privacy in certain categories such as religion, sexual attitudes, family income, and so on.</p>
+                    <p class="text-justify">In compliance with PPRA, Socratease does not administer or conduct any surveys or evaluations on AutoProctor that elicit information on any of the eight protected categories of the PPRA.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">COPPA COMPLIANCE (FOR CHILDREN UNDER 13 ONLY)</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">The Children's Online Privacy Protection Act ("<span class="underline">COPPA</span>") is a federal legislation that applies to entities that collect and store "Personal Information," as the term is defined under COPPA, from children under the age of thirteen (13). We are committed to ensuring compliance with COPPA. If you would like to know more about our practices and specifically our practices in relation to COPPA compliance, please email us at <a class="text-main-skyBlue" href="mailto:privacy@autoproctor.co" target="_blank" rel="noopener">privacy@autoproctor.co</a>. Children can access many parts of the Platform and its content and use many of its features without providing us with personal information. However, some content and features are available only to registered users or require us to collect certain information, including personal information, from them. In addition, we use certain technologies, such as cookies, to automatically collect information from our users (including children) when they visit or use our Website, App, or Platform.</p>
+                    <p class="text-justify">We only collect as much information about a child as is reasonably necessary for the child to participate in an activity, and we do not condition his or her participation on the disclosure of more personal information than is reasonably necessary.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">CAN-SPAM ACT OF 2003</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">The CAN-SPAM Act establishes requirements for commercial messages, gives recipients the right to have businesses stop emailing them, and spells out penalties for violations.  Per the CAN-SPAM Act, we will:</p>
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                        <li>not use false or misleading subjects or email addresses; </li>
+                        <li>identify the email message as an advertisement in some reasonable way; </li>
+                        <li>include the physical address of Socratease, Inc., which is 21536 Saratoga Heights Dr., Saratoga, California 95070, United States; </li>
+                        <li>monitor third-party email marketing services for compliance, if one is used;</li>
+                        <li>honor opt-out/unsubscribe requests quickly; and</li>
+                        <li>give an "opt-out" or "unsubscribe" option.    </li>
+                    </ol>
+                    <p class="text-justify">If you wish to opt out of email marketing, follow the instructions at the bottom of each email or contact us at  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a> and we will promptly remove you from all future marketing correspondences.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">MODIFICATIONS TO OUR PRIVACY POLICY</strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">AutoProctor reserves the right, at its sole discretion, to change or modify this Privacy Policy at any time. In the event we modify this Privacy Policy, such modifications shall be binding on you only upon your acceptance of the modified Privacy Policy. We will inform you about the modifications on our Privacy Policy page via email, on our Website, App, or Platform by posting a modified version of the Privacy Policy page, or by a comparable means within a reasonable time period.  Your continued use of our Website, App, or Platform shall constitute your consent to such changes.</p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">LIST OF THIRD-PARTY SERVICE PROVIDERS</strong>
+
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">AutoProctor uses the following third-party service providers for the provision of services as detailed under the <a class="text-main-skyBlue" href='terms-service.html' target='_blank'>Terms of Service</a>, as applicable</p>
+                    <div>
+                        <table class="w-full">
+                            <tbody class="divide-y divide-gray-200 border-b border-gray-200 w-full">
+                                <tr>
+                                    <td class="py-7">Name of Third-Party Service Provider</td>
+                                    <td class="py-7">Contact Information</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-7">Amazon Web Services Inc. </td>
+                                    <td class="py-7 space-y-2">
+                                        <p>Website: <a class="text-main-skyBlue" href="https://aws.amazon.com/premiumsupport/knowledge-center/aws-phone-support/" target="_blank" rel="noopener">https://aws.amazon.com/premiumsupport/knowledge-center/aws-phone-support/</a></p>
+                                        <p>Address: 410 Terry Avenue North, Seattle, Washington 98109-5210, United States</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-7">Stripe, Inc. </td>
+                                    <td class="py-7 space-y-2">
+                                        <p>Email: <a class="text-main-skyBlue" href="mailto:info@stripe.com" target="_blank" rel="noopener">info@stripe.com</a></p>
+                                        <p>Address: 510 Townsend St, San Francisco, California 94103, United States</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-7">Google</td>
+                                    <td class="py-7 space-y-2">
+                                        <p>Website: <a class="text-main-skyBlue" href="https://about.google/contact-google/" target="_blank" rel="noopener">https://about.google/contact-google/</a></p>
+                                        <p>Google HQ, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-7">PostHog</td>
+                                    <td class="py-7 space-y-2">
+                                        <p>
+                                            Website: <a class="text-main-skyBlue" href="https://posthog.com/" target="_blank" rel="noopener">https://posthog.com/</a>
+                                        </p>
+                                        <p>
+                                            Posthog, Inc, CA, USA
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-7">DigitalOcean</td>
+                                    <td class="py-7 space-y-2">
+                                        <p>Website: <a class="text-main-skyBlue" href="https://www.digitalocean.com/">https://www.digitalocean.com/</a></p>
+                                        <p>DigitalOcean Inc, 101, 6th Ave, New York, NY, USA</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-justify">Additionally, if you have any questions or concerns about our third-party service providers, please email us at  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a>. </p>
+                </div>
+            </li>
+
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">COPYRIGHT INFRINGEMENT/DMCA NOTICE</strong>
+                <div class="mt-4 space-y-4">
+                    <p>If you believe that any content on our Website, App, or Platform violates your copyright, and you wish to have the allegedly infringing material removed, the following information in the form of a written notification (pursuant to the Digital Millennium Copyright Act of 1998 ("<span class="underline">DMCA Takedown Notice</span>")) must be provided to our designated Copyright Agent. </p>
+                    <ol class="list-decimal lg:pl-10 md:pl-8 sm:pl-6 pl-4">
+                        <li>Your physical or electronic signature;</li>
+                        <li>Identification of the copyrighted work(s) that you claim to have been infringed;</li>
+                        <li>Identification of the material on our Website, App, or Platform that you claim is infringing and that you request us to remove;</li>
+                        <li>Sufficient information to permit us to locate such material;</li>
+                        <li>Your address, telephone number, and email address;</li>
+                        <li>A statement that you have a good faith belief that use of the objectionable material is not authorized by the copyright owner, its agent, or under the law; and</li>
+                        <li>A statement that the information in the notification is accurate, and under penalty of perjury, that you are either the owner of the copyright that has allegedly been infringed or that you are authorized to act on behalf of the copyright owner.</li>
+                    </ol>
+                    <p>Socratease's Copyright Agent to receive DMCA Takedown Notices is Jayanth Neelakanta, at  <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a> and at Socratease, Inc., Attn: DMCA Notice, 21536 Saratoga Heights Dr., Saratoga, California 95070, United States. You acknowledge that for us to be authorized to take down any content, your DMCA Takedown Notice must comply with all the requirements of this Section. Please note that, pursuant to 17 U.S.C. &sect; 512(f), any misrepresentation of material fact (falsities) in a written notification automatically subjects the complaining party to liability for any damages, costs and attorney's fees incurred by Socratease in connection with the written notification and allegation of copyright infringement. </p>
+                </div>
+            </li>
+            <li class="my-10 mx-auto">
+                <strong class="font-bold">CONTACT US </strong>
+                <div class="mt-4 space-y-4">
+                    <p class="text-justify">To ask questions or comment about this Privacy Policy and our privacy practices, please contact our Privacy Officer Jayanth Neelakanta at <a class="text-main-skyBlue" href='mailto:privacy@autoproctor.co'>privacy@autoproctor.co</a> or 21536 Saratoga Heights Dr., Saratoga, California 95070, United States.</p>
+                    <p class="text-justify">PLEASE NOTE: IF YOU USE OUR WEBSITE, APP, OR PLATFORM, YOU HAVE AGREED TO AND ACCEPTED THE PRACTICES DESCRIBED IN THIS PRIVACY POLICY AND THE TERMS AND CONDITIONS SET FORTH IN OUR <a class="text-main-skyBlue" href='terms-service.html' target='_blank'>TERMS OF SERVICE</a>, AS APPLICABLE.  IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY OR OUR <a class="text-main-skyBlue" href='terms-service.html' target='_blank'>TERMS OF SERVICE</a>, PLEASE DO NOT USE OUR WEBSITE, APP, OR PLATFORM.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <footer class="font-family-ibm-plex bg-main-darkNavyBlue py-12 px-4 sm:px-6 lg:px-8 bottom-0 w-full mt-auto" style="box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.16);" aria-labelledby="footer-heading">
+
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-between gap-10 ">
+                    <div class="space-y-4 xl:col-span-1">
+                        <a href="privacy-policy.html#" class="flex items-center gap-x-3">
+                            <span class="sr-only">autoproctor</span>
+                            <img
+                                    class="w-48 h-auto"
+                                    src="static/img/logo.png"
+                                    alt="Autoproctor logo"
+                            />
+                        </a>
+                        <p class="text-base text-white">© 2022, Socratease Inc. All rights reserved.</p>
+                    </div>
+                    <div class="max-w-md flex flex-wrap justify-between gap-4">
+                        <a href="terms-service.html" class="text-white hover:underline">Terms and Conditions</a>
+                        <a href="privacy-policy.html" class="text-white hover:underline">Privacy Policies and Cookies</a>
+                        <a href="https://autoproctor.freshdesk.com/" target="_blank" class="text-white hover:underline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
+
+    <script src="https://cdn.autoproctor.co/static/scripts/common-functions.js?v=s8g"></script>
+
+    <script>
+        var maxSentryEvents = 6;
+        var numberOfCurrentSentryEvents = 0;
+        const byPassedErrorsDict = [{ error: "privateSpecialRepair", reason: "Chrome mobile view error"},
+            { error: "Non-Error promise rejection captured with keys", reason: ""},
+            { error: "Non-Error promise rejection captured with value", reason: "https://forum.sentry.io/t/unhandledrejection-non-error-promise-rejection-captured-with-value/14062/12"},
+            { error: "getReadModeExtract", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected"},
+            { error: "getReadModeRender", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "getReadModeConfig", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "Identifier 'isMainframe' has already been declared", reason: "Not from our codebase" },
+            { error: "runCustomize is not defined", reason: "Not from our codebase" },
+            { error: "processRandomSelector is not defined", reason: "Not from our codebase" },
+            { error: "ResizeObserver loop limit", reason: "Can be ignored: https://stackoverflow.com/questions/49384120/resizeobserver-loop-limit-exceeded" }]
+        const errorArr = byPassedErrorsDict.map(function(ped) {  return ped.error; })
+        var serverErrorsRegex = new RegExp(errorArr.join("|"), "mi");
+
+        
+            Sentry.init({
+                dsn: "https://cac61d5e1fe04b01a6409048914ff88e@o288839.ingest.sentry.io/5911954",
+                beforeSend(event) {
+                    numberOfCurrentSentryEvents++;
+                    if (numberOfCurrentSentryEvents <= maxSentryEvents) {
+                        return event;
+                    } else {
+                        return null;
+                    }
+                },
+                tracesSampleRate: 1.0,
+                environment: "production",
+                ignoreErrors: [serverErrorsRegex],
+            });
+            
+        
+
+        
+
+            window.$crisp = [];
+            window.CRISP_WEBSITE_ID = "380ff461-e7c5-4a2d-8a24-36dd7d23b74d";
+            (function (){d = document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})
+            ();
+
+            
+                $crisp.push(["set", "session:data", [[["role", "user" ]]]]);
+            
+        
+
+        window.addEventListener("load", function () {
+            if (typeof $ === "undefined") {
+                alert("There was an error connecting to the internet. We will now try reloading the page.");
+                window.location.reload();
+                return;
+            }
+
+            $("#sidebar-collapsible").on('click', function () {
+                if (!$(this).hasClass("ques-container-active")) {
+                    $(this).addClass("ques-container-active");
+                    $(this).find('.sidebar-uncollapsible-icon').hide();
+                    $(this).find('.collapsible-body').show();
+                    $(this).find(".sidebar-collapsible-icon").show();
+                } else {
+                    $(this).find('.sidebar-collapsible-icon').hide();
+                    $(this).find('.collapsible-body').hide();
+                    $(this).find(".sidebar-uncollapsible-icon").show();
+                    $("#sidebar-collapsible").removeClass("ques-container-active");
+                }
+            });
+
+            $('body').click(function(e) {
+                if (!$(e.target).closest("#account-dropdown").length && !$(e.target).closest(".dropdown-trigger").length) {
+                    $("#account-dropdown").hide();
+                }
+            });
+
+            const $staticSidebarOverlay = $('#static-sidebar--overlay');
+            const $staticSidebarContainer = $('#static-sidebar--container');
+            const $staticSidebar = $('#static-sidebar');
+
+            function toggleStaticSidebarState(state) {
+                if (state === 'on') {
+                    $staticSidebar.show();
+                    $staticSidebarOverlay.removeClass('opacity-0');
+                    $staticSidebarOverlay.addClass('opacity-100');
+                    $staticSidebarContainer.removeClass('-translate-x-full');
+                    $staticSidebarContainer.addClass('translate-x-0');
+                } else {
+                    $staticSidebar.hide();
+                    $staticSidebarOverlay.removeClass('opacity-100');
+                    $staticSidebarOverlay.addClass('opacity-0');
+                    $staticSidebarContainer.removeClass('translate-x-0');
+                    $staticSidebarContainer.addClass('-translate-x-full');
+                }
+            }
+
+
+            $('#sidebar-trigger').click(function () {
+                if ($staticSidebarContainer.hasClass('-translate-x-full')) {
+                    toggleStaticSidebarState('on');
+                } else {
+                    toggleStaticSidebarState('off');
+                }
+            })
+
+            $staticSidebarOverlay.click(function() {
+                toggleStaticSidebarState('off');
+            })
+
+            
+
+
+            
+                
+            
+
+            const upgradePlanUrl = "/account/edit-profile";
+            const upgradePlanMsg = "This feature is available only for Premium Users. Click <a href='https://www.autoproctor.co/&quot;&#32;+&#32;upgradePlanUrl&#32;+&#32;&quot;' target='_blank'>here</a> to upgrade to a Premium Plan."
+
+            $('.upgrade-premium-feature').click(function () {
+                Swal.fire({
+                    type: "info",
+                    title: "Premium Feature",
+                    html: upgradePlanMsg,
+                });
+            });
+
+            let updatePolicyVersion, acceptNewTerms;
+            
+
+            let policyTitle, policyMsg;
+            const termsOfUseUrl = "/terms-service";
+            const privacyPolicyUrl =
+            "/privacy-policy"
+
+            if (updatePolicyVersion === true) {
+                policyTitle = "Updated Terms of Use and Privacy Policy";
+                policyMsg = "We have updated our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our new Policies.";
+            } else if (acceptNewTerms === true) {
+                policyTitle = "Terms of Use and Privacy Policy";
+                policyMsg = "These are our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our Policies.";
+            }
+
+            if (updatePolicyVersion === true || acceptNewTerms === true) {
+                Swal.fire({
+                    type: "info",
+                    title: policyTitle,
+                    html: policyMsg,
+                    allowOutsideClick: false
+                }).then((result) => {
+                    if (result.value) {
+                        const url = "/account/update-policy-version/";
+                        const ajaxParams = {headers: {'X-CSRF-Token': "ImVhMjczNjA3YTg0Y2IzMWNhMDg3YzRkODRiZDBiMDJiMjVjYzkzNzci.Y1DjGQ.1ipoDt4Rka2PZH9x7msS2tt3dm8"}};
+                        const successRedirectUrl = window.location;
+                        makePostRequest(url, {}, successRedirectUrl, ajaxParams);
+
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+</body>
+</html>

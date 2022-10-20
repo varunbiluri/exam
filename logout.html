@@ -1,0 +1,1433 @@
+
+
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="shortcut icon" href="https://cdn.autoproctor.co/static/img/favicon.png"/>
+        
+            <script
+                    src="https://browser.sentry-cdn.com/5.17.0/bundle.min.js"
+                    integrity="sha384-lowBFC6YTkvMIWPORr7+TERnCkZdo5ab00oH5NkFLeQUAmBTLGwJpFjF6djuxJ/5"
+                    crossorigin="anonymous"
+            ></script>
+        
+        
+
+        <title>AutoProctor: Automated Online Test Proctoring</title>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
+          
+    
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.css"
+            rel="stylesheet"
+    />
+    
+        <link rel="stylesheet" href="https://cdn.autoproctor.co/static/style/main-style.min.css?v=2.2"/>
+    
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .soc-breadcrumb {
+                @apply hidden;
+            }
+
+            .test-admin-primary-sidebar {
+                @apply -mt-px;
+            }
+
+            audio, canvas, iframe, img, object, video {
+                display: unset !important;
+            }
+
+            .soc-main-layout {
+                font-family: "Roboto", serif !important;
+            }
+
+            .ap-login-btn {
+                @apply py-3 px-9;
+            }
+
+            .ap-lp-hero {
+                @apply p-0;
+            }
+
+            .ap-login-btn > span {
+                @apply ml-2.5;
+            }
+
+            .non-footer-content {
+                flex: 1 0 auto;
+            }
+
+
+        
+            #nav-logo {
+                left: 0;
+                /* margin-left: 152px; */
+            }
+        
+
+            .sidenav li > a:hover {
+                @apply bg-transparent;
+            }
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: black;
+        }
+        .swiper-pagination-bullet {
+            width: 16px;
+            height: 16px;
+        }
+        .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 20rem !important;
+            left: 0;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 27rem !important;
+            left: 0;
+            width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 27rem !important;
+            left: 0;
+            width: 100%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 1rem !important;
+            left: 0;
+            width: 100%;
+            }
+        }
+      }
+    </style>
+
+
+    
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                                });
+                        }
+
+                        ((p = t.createElement("script")).type = "text/javascript"),
+                            (p.async = !0),
+                            (p.src = s.api_host + "/static/array.js"),
+                            (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
+                                    " "
+                                ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("Asio7_Oj3Io9h2WMlLHxMHrsHdiMv_NdVF9WXKbVQUo", {api_host: "https://app.posthog.com"});
+            
+        </script>
+    
+
+    <script>
+        var gaIsAvailable = false;
+    </script>
+    
+        <script type="text/javascript">
+            gaIsAvailable = true;
+            var gaID = "UA-165591693-1";
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', gaID, 'auto');
+            
+            ga('send', 'pageview');
+        </script>
+
+    
+</head>
+
+<body class="flex min-h-screen flex-col">
+<div class="non-footer-content">
+    
+        
+            <div class="navbar-fixed fixed z-30 w-full px-4 lg:px-14 bg-gradient-to-r from-[#363FB5] to-[#00A36D] shadow-lg" id="navbar-container">
+                <nav class="relative py-2.5 max-w-7xl nav-content mx-auto">
+                    <div class="flex items-center justify-between flex-row">
+                        <div class="nav_left_half flex flex-row-reverse items-center justify-end w-full gap-4 md:w-auto">
+                            <a href="logout.html" class="flex items-center gap-x-3" id="nav-logo">
+                                <span class="sr-only">autoproctor</span>
+                                <img
+                                        class="w-auto h-6"
+                                        src="https://cdn.autoproctor.co/static/img/icons/ap-logo.svg"
+                                        alt=""
+                                />
+                                <span class="text-2xl text-white font-montserrat">AutoProctor</span>
+                            </a>
+                            
+
+                                <button
+                                        type="button"
+                                        class="flex items-center -mr-2 md:hidden sidenav-trigger inline-flex items-center justify-center p-2 text-white rounded-md hover:text-gray-200 focus:outline-none ph-no-capture"
+                                        id="sidebar-trigger"
+
+                                >
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg
+                                            class="w-6 h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            aria-hidden="true"
+                                    >
+                                        <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2.5"
+                                                d="M4 6h16M4 12h16M4 18h16"
+                                        />
+                                    </svg>
+                                </button>
+
+                            
+                        </div>
+
+                        <div id="nav-right-half" class="items-center hidden gap-8 md:flex">
+                            <ul class="dropdown-content hidden absolute top-12 right-8 bg-white text-center text-emerald-600 shadow-lg rounded py-1.5 space-y-2" id="account-dropdown" style="min-width: 150px;z-index: 100;">
+                                
+                                <li><a class="hover:underline ph-no-capture" href="logout.html">Logout</a></li>
+                            </ul>
+
+                            <ul class="right flex items-center md:space-x-6">
+                                
+
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="pricing" href="../pricing.html">Pricing</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="faqs" href="../faqs.html">FAQs</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a href="https://help.autoproctor.co/">Help</a></li>
+                                    
+                                        <li class="inline-flex">
+                                            <a
+                                                    href="login/index.html"
+                                                    class="inline-flex items-center py-2.5 text-lg font-medium text-white bg-white border border-transparent rounded-full bg-opacity-30 px-9 hover:bg-opacity-50 transition-all ease-in duration-200 font-roboto"
+                                            >
+                                                SIGN IN
+                                                <span class="ml-2">
+                                                <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="w-[18px] h-[18px]"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                        stroke-width="2.5"
+                                                >
+                                                <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M9 5l7 7-7 7"
+                                                />
+                                                </svg>
+                                            </span>
+                                            </a>
+                                        </li>
+                                    
+                                
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+
+        
+            
+    <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true" style="display: none" id="static-sidebar">
+        <div class="fixed inset-0 bg-gray-600 bg-opacity-75 opacity-0"  id="static-sidebar--overlay"  aria-hidden="true"></div>
+        <div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-200 -translate-x-full" id="static-sidebar--container">
+
+
+
+
+
+
+
+
+
+
+            <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                <nav class="px-4 mt-4 space-y-1 text-indigo-700 text-lg font-medium">
+                    
+
+                    
+
+
+                    <a href="https://help.autoproctor.co/how-to-add-timer-proctor-google-forms/" target="_blank" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        How it works
+                    </a>
+
+                    <a href="../pricing.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        Pricing
+                    </a>
+
+                    <a href="../faqs.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        FAQs
+                    </a>
+
+                    <a href="https://help.autoproctor.co/" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        Support
+                    </a>
+
+                    
+                        <a href="login/index.html" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg>
+                            Login
+                        </a>
+                    
+                </nav>
+            </div>
+        </div>
+
+        <div class="flex-shrink-0 w-14" aria-hidden="true">
+            <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+    </div>
+
+        
+    
+
+    <div class="page-container">
+        <div class="content">
+            
+
+    <div class="font-family-ibm-plex" id="homepage-container">
+
+        <!-- Hero -->
+        <section class="pt-12 pb-20 bg-sky-100">
+            <div class="w-full max-w-7xl mx-auto px-0 sm:px-4 mt-16 sm:mt-20 md:mt-24 ">
+                    <div class="text-center">
+                        <h1 class="font-bold text-center text-3xl md:text-5xl lg:text-6xl lg:leading-[4rem]">
+                        Fully Automated Exam Proctoring
+                        </h1>
+                        <p
+                        class="mx-auto max-w-md md:max-w-3xl mt-3 md:mt-5 text-xl md:text-3xl  text-black "
+                        >
+                        No More Cheating on Online Tests
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center gap-5 mt-8 md:flex-row xs:mt-10 "
+                    >
+                        <a
+                        href="../tests/start-test/GFICZZZA.html"
+                        class="inline-flex uppercase items-center py-2.5 px-9 text-xl font-semibold text-white border border-transparent rounded-full transition-all ease-in duration-200 hover:bg-opacity-50 bg-opacity-20 tracking-widest hover:underline btn-gradient ph-no-capture"
+                        >
+                        TAKE DEMO TEST 
+                        <span class="ml-1.5">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-[18px] h-[18px]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                            </svg>
+                        </span>
+                        </a>
+                        <a
+                        href="../test-admin/add-iframe-test.html"
+                        class="inline-flex uppercase items-center py-2.5 text-xl font-semibold text-black bg-transparent hover:bg-gradient-to-r hover:from-purple-300 hover:to-pink-300 border-2 rounded-full px-9 transition-all ease-in duration-200 tracking-widest btn-border-gradient hover:underline ph-no-capture"
+                        >
+                        CREATE TEST
+                        <span class="ml-1.5">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-[18px] h-[18px]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                            </svg>
+                        </span>
+                        </a>
+                    </div>
+            </div>
+
+            <div class="relative flex flex-col items-center justify-between gap-8 pt-10 mx-auto lg:flex-row lg:items-end lg:gap-0 xl:gap-10 max-w-7xl">
+                <div class="flex justify-center h-auto max-w-xs min-w-fit w-36 sm:w-full">
+                    <img
+                        src="https://cdn.autoproctor.co/static/img/static-pages/hero-illustration-1.svg"
+                        alt=""
+                        class="w-4/5 h-4/5 xl:w-full xl:h-full"
+                    />
+                </div>
+                <div class="swiper-container ap-lp-hero__slider w-full h-full max-w-xs overflow-hidden rounded-lg xs:max-w-sm sm:max-w-md md:max-w-xl xs:px-0 bg-white">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-full">
+                            <h4
+                                class="w-full py-4 text-xl font-medium text-center text-white sm:text-2xl bg-gradient-to-r from-[#363FB5] to-[#00A36D]"
+                            >
+                            Create a Proctored Test within Minutes
+                            </h4>
+                            <div class="w-full bg-white ">
+                                <div class="flex justify-center py-6">
+                                    <img
+                                        class="w-auto h-14"
+                                        src="https://cdn.autoproctor.co/static/img/static-pages/ap-logo.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <ul role="list" class="w-full px-4 pt-4 pb-16 space-y-3 sm:px-12 md:space-y-5">
+                                    <li class="flex items-start lg:col-span-1">
+                                        <div class="flex-shrink-0">
+                                        <!-- Heroicon name: solid/check-circle -->
+                                        <svg
+                                            class="w-4 h-4 mt-1 text-blue-800 sm:w-6 sm:h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                        </div>
+                                        <p class="ml-3 text-left text-base font-medium text-black sm:ml-4 sm:text-xl">
+                                        Get reports of suspicious behaviour detected during the test
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start lg:col-span-1">
+                                        <div class="flex-shrink-0">
+                                        <!-- Heroicon name: solid/check-circle -->
+                                        <svg
+                                            class="w-4 h-4 mt-1 text-blue-800 sm:w-6 sm:h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                        </div>
+                                        <p class="ml-3 text-left text-base font-medium text-black sm:ml-4 sm:text-xl">
+                                        Use Google/Microsoft Forms or AutoProctor’s Assessment Platform
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start lg:col-span-1">
+                                        <div class="flex-shrink-0">
+                                        <!-- Heroicon name: solid/check-circle -->
+                                        <svg
+                                            class="w-4 h-4 mt-1 text-blue-800 sm:w-6 sm:h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                        </div>
+                                        <p class="ml-3 text-left text-base font-medium text-black sm:ml-4 sm:text-xl">
+                                        Choose what gets Tracked & Stored: Audio, Video, etc
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide w-full">
+                            <h4 class="w-full py-4 text-xl font-medium text-center text-white sm:text-2xl bg-gradient-to-r from-[#363FB5] to-[#00A36D]">
+                            Integrate AutoProctor with your Website
+                            </h4>
+                            <div class="w-full bg-white h-full">
+                                <div class="flex justify-center items-center gap-x-4 py-6 ">
+                                    <img
+                                        class="w-auto h-14"
+                                        src="https://cdn.autoproctor.co/static/img/static-pages/js-logo.svg"
+                                        alt=""
+                                    />
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                                    </svg>
+                                    <img src="https://cdn.autoproctor.co/static/img/static-pages/ap-logo.svg" class="w-auto h-14" />
+                                </div>
+                                
+                                <ul role="list" class="w-full px-4 pt-4 pb-20 space-y-3 sm:px-12 md:space-y-5">
+                                    <li class="flex items-start lg:col-span-1">
+                                        <div class="flex-shrink-0">
+                                        <!-- Heroicon name: solid/check-circle -->
+                                        <svg
+                                            class="w-4 h-4 mt-1 text-blue-800 sm:w-6 sm:h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-left font-medium text-black sm:ml-4 sm:text-xl">
+                                            Easy setup with just a few lines of our JavaScript SDK
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start lg:col-span-1">
+                                        <div class="flex-shrink-0">
+                                        <!-- Heroicon name: solid/check-circle -->
+                                        <svg
+                                            class="w-4 h-4 mt-1 text-blue-800 sm:w-6 sm:h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-left font-medium text-black sm:ml-4 sm:text-xl">
+                                            Fully white-labelled solution allows you to use your own Branding
+                                        </p>
+                                    </li>
+                                    <li class="flex items-start lg:col-span-1">
+                                        <div class="flex-shrink-0">
+                                        <!-- Heroicon name: solid/check-circle -->
+                                        <svg
+                                            class="w-4 h-4 mt-1 text-blue-800 sm:w-6 sm:h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-left font-medium text-black sm:ml-4 sm:text-xl">
+                                            REST API endpoints to fetch data for Custom Report
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="flex justify-center h-auto max-w-xs min-w-fit w-36 sm:w-full">
+                    <img
+                        src="https://cdn.autoproctor.co/static/img/static-pages/hero-illustration-2.svg"
+                        alt=""
+                        class="w-4/5 h-4/5 xl:w-full xl:h-full"
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- End Hero -->
+
+        <!-- Review -->
+        <section class="py-20 bg-white">
+            <div class="flex flex-col items-center justify-center gap-2">
+            <a href="https://workspace.google.com/marketplace/app/timer_+_proctor/691377974459" class="inline-flex items-center px-10 py-3 text-2xl font-medium text-white transition-all duration-200 ease-in bg-opacity-100 border-none rounded-md lg:px-24 lg:text-3xl bg-gradient-to-r from-[#363FB5] to-[#00A36D] hover:bg-opacity-50">
+            10 Million+ Installs
+                <span class="ml-1.5">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-[18px] h-[18px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="3.5"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 5l7 7-7 7"
+                        />
+                    </svg>
+                </span>
+            </a>
+            <p class="text-black">On Google Workspace Marketplace</p>
+            </div>
+            <div
+            class="grid grid-cols-2 grid-rows-2 px-6 mt-12 md:flex xs:px-14 gap-y-6 gap-x-0 xs:gap-6 lg:gap-14 md:items-center md:justify-center"
+            >
+            <div class="col-span-1 col-start-1 row-start-2 space-y-4 text-center justify-self-start font-serif">
+                <h3 class="text-[28px] xs:text-3xl md:text-[40px] leading-7 font-bold">20,000 +</h3>
+                <p class="text-base font-medium md:text-xl">Organizations</p>
+            </div>
+            <div
+                class="w-40 h-full col-span-2 row-span-1 md:w-52 lg:w-60 justify-self-center"
+            >
+                <img
+                src="https://cdn.autoproctor.co/static/img/static-pages/google-customer-reviews.svg"
+                class="w-full h-full"
+                alt=""
+                />
+            </div>
+            <div class="col-span-1 col-start-2 space-y-4 text-center justify-self-end font-serif">
+                <h3 class="text-[28px] xs:text-3xl md:text-[40px] leading-7 font-bold">
+                10 Million+
+                </h3>
+                <p class="text-base font-medium md:text-xl">Test Attempts</p>
+            </div>
+            </div>
+        </section>
+        <!-- End Review -->
+
+        <section class="bg-white">
+            <div class="mx-auto max-w-5xl py-6 sm:py-8 md:py-12 px-4 lg:px-8">
+                <h1 class="text-3xl lg:text-6xl md:text-5xl lg:leading-[4rem] px-0 md:px-0 sm:px-10 font-bold text-center">
+                World’s smartest, A.I. powered remote proctoring software
+                </h1>
+            </div>
+            <div class="py-20 sm:py-10 bg-gradient-to-r from-[#5167fb] to-[#7239d1]">
+                <div class="mx-auto max-w-xl md:max-w-7xl px-4 md:px-6 lg:px-8">
+                    <h2 class="sr-only">A better way to send money.</h2>
+                    <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
+                        <div class="max-w-xs px-6 mx-auto xs:px-0">
+                            <dt class="text-center">
+                                <div
+                                class="flex items-center justify-center text-center text-white"
+                                >
+                                <div class="w-32 h-32 sm:w-40 sm:h-40">
+                                    <img
+                                    src="https://cdn.autoproctor.co/static/img/static-pages/feature-icon-1.svg"
+                                    class="w-full h-full"
+                                    alt=""
+                                    />
+                                </div>
+                                </div>
+                                <p
+                                class="text-2xl font-semibold leading-6 text-white uppercase"
+                                >
+                                CROSS-PLATFORM
+                                </p>
+                            </dt>
+                            <dd class="mt-3 text-base text-center text-white">
+                                Can handle 1000’s of simultaneous users. Across multiple devices
+                            </dd>
+                        </div>
+                        <div class="max-w-xs px-6 mx-auto xs:px-0">
+                            <dt class="text-center">
+                                <div
+                                class="flex items-center justify-center text-center text-white"
+                                >
+                                <div class="w-32 h-32 sm:w-40 sm:h-40">
+                                    <img
+                                    src="https://cdn.autoproctor.co/static/img/static-pages/feature-icon-2.svg"
+                                    class="w-full h-full"
+                                    alt=""
+                                    />
+                                </div>
+                                </div>
+                                <p
+                                class="text-2xl font-semibold leading-6 text-white uppercase"
+                                >
+                                REAL-TIME
+                                </p>
+                            </dt>
+                            <dd class="mt-3 text-base text-center text-white">
+                                Monitors Test-Taker's Environment real-time to Prevent Malpractice
+                            </dd>
+                        </div>
+                        <div class="max-w-xs px-6 mx-auto xs:px-0">
+                            <dt class="text-center">
+                                <div
+                                class="flex items-center justify-center text-center text-white"
+                                >
+                                <div class="w-32 h-32 sm:w-40 sm:h-40">
+                                    <img
+                                    src="https://cdn.autoproctor.co/static/img/static-pages/feature-icon-3.svg"
+                                    class="w-full h-full"
+                                    alt=""
+                                    />
+                                </div>
+                                </div>
+                                <p
+                                class="text-2xl font-semibold leading-6 text-white uppercase"
+                                >
+                                COMPREHENSIVE
+                                </p>
+                            </dt>
+                            <dd class="mt-3 text-base text-center text-white">
+                                Generates a Trust Score based on multiple tracked factors
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative overflow-hidden bg-white py-28">
+            <div class="relative px-4 sm:px-6 lg:px-8">
+              <div class="mx-auto text-lg max-w-prose">
+                <h1 class="text-3xl lg:text-6xl md:text-5xl lg:leading-[4rem] px-0 md:px-0 sm:px-10 font-bold text-center">
+                  How it works
+                </h1>
+              </div>
+              <div class="max-w-5xl mx-auto mt-12 xs:mt-16">
+                <div class="w-full aspect-w-6 aspect-h-6 h-60 sm:h-96 lg:h-[35rem]">
+                  <iframe
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/LoAqvp5rkEM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="bg-yellow-50">
+            <div
+              class="mx-auto max-w-2xl lg:max-w-7xl py-20 px-4 sm:px-6 lg:px-8"
+            >
+              <div class="max-w-6xl mx-auto text-center">
+                 <h1 class="text-3xl lg:text-6xl md:text-5xl lg:leading-[4rem] px-0 md:px-0 sm:px-10 font-bold text-center font-serif">
+                  Create an AI-monitored, remotely-proctored test with AutoProctor
+                </h1>
+              </div>
+      
+              <div class="mt-20 space-y-12 lg:space-y-20">
+                <div
+                  class="flex flex-col-reverse sm:px-4 lg:px-0 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:items-center "
+                >
+                  <div
+                    class="mt-6 lg:mt-0 lg:max-w-sm lg:row-start-1 lg:col-span-5 lg:col-start-9"
+                  >
+                    <h3 class="text-2xl md:text-3xl font-semibold text-black ">Create a New Test or use an Existing Test</h3>
+                    <p class="mt-4 text-black">
+                      Use AutoProctor to create a new test using its own testing software. Or, link to quizzes you may
+                      have created on other platforms like Google Forms, Microsoft Forms, Moodle, etc.
+                    </p>
+                  </div>
+                  <div
+                    class="flex-auto lg:row-start-1 lg:col-span-7 lg:col-start-1"
+                  >
+                    <div
+                      class="aspect-w-5 aspect-h-2"
+                    >
+                      <img
+                        src="https://cdn.autoproctor.co/static/img/static-pages/feature-img-1.jpg"
+                        alt="proctor feature"
+                        class="object-cover object-center w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col-reverse sm:px-4 lg:px-0 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:items-center "
+                >
+                  <div
+                    class="mt-6 lg:mt-0 lg:max-w-sm  lg:row-start-1 lg:col-span-4 lg:col-start-1"
+                  >
+                  <h3 class="text-2xl md:text-3xl font-semibold text-black ">Schedule, Share and View Results</h3>
+                    <p class="mt-4 text-black">
+                      In just a few clicks, you can schedule a test and get a link you can share with the students. As
+                      they finish the test, you can view reports of their performance, and the corresponding Trust Score.
+                    </p>
+                  </div>
+                  <div
+                    class="flex-auto lg:row-start-1 lg:col-span-8 lg:col-start-7"
+                  >
+                    <div
+                      class="aspect-w-5 aspect-h-2"
+                    >
+                      <img
+                        src="https://cdn.autoproctor.co/static/img/static-pages/feature-img-2.jpg"
+                        alt="proctor feature"
+                        class="object-cover object-center w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div
+                  class="flex flex-col md:flex-row items-center justify-center gap-4 mt-28"
+                >
+                  <a
+                    href="../test-admin/add-iframe-test.html"
+                    class="inline-flex uppercase items-center py-2.5 text-xl font-semibold text-white bg-gradient-to-r from-purple-700 to-pink-600 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 border border-transparent rounded-full px-9 transition-all ease-in duration-200 hover:bg-opacity-50 bg-opacity-20 tracking-widest hover:underline"
+                  >
+                  GET STARTED NOW 
+                    <span class="ml-1.5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-[18px] h-[18px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <a
+                    href="https://help.autoproctor.co/how-to-add-timer-proctor-google-forms/"
+                    class="inline-flex uppercase items-center py-2.5 text-xl font-semibold text-black bg-transparent hover:bg-gradient-to-r hover:from-purple-300 hover:to-pink-300 border-2 rounded-full px-9 transition-all ease-in duration-200 tracking-widest btn-border-gradient hover:underline"
+                  >
+                  LEARN MORE 
+                    <span class="ml-1.5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-[18px] h-[18px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <div
+              class="mx-auto lg:max-w-7xl py-20 sm:py-24 px-4 sm:px-6 lg:px-8"
+            >
+              <div class="max-w-6xl mx-auto text-center">
+                 <h1 class="text-3xl lg:text-6xl md:text-5xl lg:leading-[4rem] px-0 md:px-0 sm:px-10 font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#363FB5] to-[#00A36D]">
+                  Get all of AutoProctor directly onto your own site
+                </h1>
+              </div>
+              <div class="-mx-4 sm:-mx-6 lg:mx-0 mt-4 mb-12 md:my-14">
+                <img src="https://cdn.autoproctor.co/static/img/static-pages/developer-main.svg" alt="">
+              </div>
+      
+              <div class="mt-20 text-center">
+                <h3 class="text-2xl md:text-[40px] font-medium text-black">Go Live in Three Easy Steps</h3>
+      
+                <div class="grid w-full mx-auto max-w-5xl grid-cols-1 md:grid-cols-3 gap-10   sm:gap-5 mt-6">
+                  <div class="max-w-md mx-auto px-12 xs:px-20 sm:px-10 md:px-0">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/developer-feature-1.svg" class="w-full h-auto md:h-52" alt="">
+                    <p class="text-xl font-medium text-left mt-2 sm:mt-4">Register on our portal to get your Access Key Pair</p>
+                  </div>
+                  <div class="max-w-md mx-auto px-12 xs:px-20 sm:px-10 md:px-0">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/developer-feature-2.svg" class="w-full h-auto md:h-52" alt="">
+                    <p class="text-xl font-medium text-left mt-2 sm:mt-4">
+                      Initialize our JS SDK on your webpage to start proctoring
+                    </p>
+                  </div>
+                  <div class="max-w-md mx-auto px-12 xs:px-20 sm:px-10 md:px-0">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/developer-feature-3.svg" class="w-full h-auto md:h-52" alt="">
+                    <p class="text-xl font-medium text-left mt-2 sm:mt-4">
+                      Get the Trust Score and a detailed test report via our REST APIs
+                    </p>
+                  </div>
+                </div>
+      
+                <div
+                class="flex flex-col md:flex-row items-center justify-center gap-4 mt-16 md:mt-8 "
+                >
+                  <a
+                    href="../developers/playground/index.html"
+                    class="inline-flex uppercase items-center py-2.5 text-xl font-semibold text-white bg-gradient-to-r from-purple-700 to-pink-600 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 border border-transparent rounded-full px-9 transition-all ease-in duration-200 hover:bg-opacity-50 bg-opacity-20 tracking-widest hover:underline"
+                  >
+                 TRY NOW
+                    <span class="ml-1.5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-[18px] h-[18px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <a
+                    href="../developers/index.html"
+                    class="inline-flex uppercase items-center py-2.5 text-xl font-semibold text-black bg-transparent hover:bg-gradient-to-r hover:from-purple-300 hover:to-pink-300 border-2 rounded-full px-9 transition-all ease-in duration-200 tracking-widest btn-border-gradient hover:underline"
+                  >
+                   LEARN MORE
+                    <span class="ml-1.5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-[18px] h-[18px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-b from-[#6efabbad] to-white">
+            <div
+              class="mx-auto lg:max-w-7xl px-4 sm:px-6 lg:px-8  py-20"
+            >
+              <div class="max-w-6xl mx-auto text-center">
+                <h1 class="text-3xl lg:text-6xl md:text-5xl lg:leading-[4rem] font-bold text-center">
+                  <span class="relative">
+                    <span class="absolute -top-5 right-14 sm:right-[72px] md:right-[90px] lg:right-32 text-2xl md:text-4xl">Hate</span>
+                    Our Users <s>Love</s> us!
+                  </span>
+                 </h1>
+                </p>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 xs:gap-8  sm:gap-0 my-16">
+                <div class="flex flex-col gap-4 px-0 xs:px-4 text-center">
+                  <div class="flex justify-center">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/avatar-1.svg" class="w-20 h-20" alt="">
+                  </div>
+                  <p class="text-xs sm:text-sm">"Whoever created AutoProctor, I hope you choke"</p>
+                </div>
+                <div class="flex flex-col gap-4 px-0 xs:px-4 mt-0 sm:mt-20 text-center">
+                  <div class="flex justify-center">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/avatar-4.svg" class="w-20 h-20" alt="">
+                  </div>
+                  <p class="text-xs sm:text-sm">"She might be AutoProctor, because she never trusted me enough"</p>
+                </div>
+                <div class="flex flex-col gap-4 px-0 xs:px-4 text-center">
+                  <div class="flex justify-center">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/avatar-6.svg" class="w-20 h-20" alt="">
+                  </div>
+                  <p class="text-xs sm:text-sm">"AutoProctor is the work of the devil"</p>
+                </div>
+                <div class="flex flex-col gap-4 px-0 xs:px-4 mt-0 sm:mt-20 text-center">
+                  <div class="flex justify-center">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/avatar-2.svg" class="w-20 h-20" alt="">
+                  </div>
+                  <p class="text-xs sm:text-sm">
+                    "Did I just hear the mom's voice helping her child to cheat thru Autoproctor's noise detection.."
+                  </p>
+                </div>
+                <div class="flex-col hidden md:flex gap-4 px-0 xs:px-4 text-center">
+                  <div class="flex justify-center">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/avatar-5.svg" class="w-20 h-20" alt="">
+                  </div>
+                  <p class="text-xs sm:text-sm">
+                    "People who made AutoProctor are the living spawns of satan 🙂 🗡️"
+                </p>
+                </div>
+                <div class="flex-col hidden md:flex gap-4 px-0 xs:px-4 mt-0 sm:mt-20 text-center">
+                  <div class="flex justify-center">
+                    <img src="https://cdn.autoproctor.co/static/img/static-pages/avatar-3.svg" class="w-20 h-20" alt="">
+                  </div>
+                  <p class="text-xs sm:text-sm">"Who introduced AutoProctor to miss zahra i just wanna talk"</p>
+                </div>
+              </div>
+      
+              <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-3xl gap-6 mx-auto ">
+                <img src="https://cdn.autoproctor.co/static/img/static-pages/y-combinator-logo.svg" alt="">
+                <h2 class="text-xl md:text-[28px] lg:text-[32px] px-0 xs:px-16 sm:px-0 font-medium text-center">Proud to be backed by Y Combinator</h2>
+              </div>
+      
+              <div class="flex flex-col sm:flex-row items-center  gap-4 px-6 py-8 mx-auto mt-24 rounded-lg sm:justify-between max-w-2xl lg:max-w-6xl sm:items-center bg-gradient-to-r from-[#363FB5] to-[#00A36D]">
+                <p class="text-xl md:text-3xl lg:text-[40px] text-white">Try AutoProctor today</p>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-6 ">
+                  <div class="space-y-1 text-center">
+                    <a
+                    href="../test-admin/add-iframe-test.html"
+                    class="inline-flex items-center py-2.5 text-xl font-medium text-white bg-white border border-transparent rounded-full bg-opacity-30 px-9 hover:bg-opacity-50 transition-all ease-in duration-200 font-roboto uppercase tracking-widest"
+                  >
+                    Start free
+                    <span class="ml-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-[18px] h-[18px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="text-white">Get 25 tests for Free!</p>
+                  </div>
+                  <div class="space-y-1 text-center">
+                    <a
+                    href="../pricing.html"
+                    class="inline-flex items-center py-2.5 text-xl font-medium text-white bg-white border border-transparent rounded-full bg-opacity-30 px-9 hover:bg-opacity-50 transition-all ease-in duration-200 font-roboto uppercase tracking-widest"
+                  >
+                    View Pricing
+                    <span class="ml-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-[18px] h-[18px]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </a>
+                  <p class="text-white">Plans starts at $10/month</p>
+                  </div>
+                </div>
+              </div>
+              <div class="px-6 py-8 mt-16 max-w-2xl lg:max-w-6xl">
+                <section class="mx-auto" >
+                  <div class="container px-4 mx-auto">
+                    <div class="max-w-4xl mx-auto mb-4 md:mb-8 text-center">
+                      <h3 class="mb-4 text-3xl md:text-4xl leading-tight font-bold tracking-tighter">AutoProctor for Hiring? Use <a href="https://equip.co" class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" target="_blank">Equip</a> instead!</h3>
+                      <p class="text-lg md:text-xl lg:text-2xl">Equip has all of AutoProctor, and more! Better Proctoring & Better Assessments.</p>
+                    </div>
+                    <div class="flex flex-wrap pb-16 lg:mt-4">
+                      <div class="w-full lg:w-1/3 px-4 mb-10 lg:mb-0">
+                        <div class="max-w-xs mx-auto text-center">
+                          <div class="inline-flex mb-1 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                          </svg>
+                          </div>
+                          <h3 class="mb-2 text-xl md:text-2xl leading-8 font-bold">Different Test Types</h3>
+                          <p class="text-base">Coding challenges for Developers, Communication tests for Sales and Support, etc. Not just MCQs!</p>
+                        </div>
+                      </div>
+                      <div class="w-full lg:w-1/3 px-4 mb-10 lg:mb-0">
+                        <div class="max-w-xs mx-auto text-center">
+                          <div class="inline-flex mb-1 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                          </svg>
+                          </div>
+                          <h3 class="mb-2 text-xl md:text-2xl leading-8 font-bold">Link Multiple Tests
+
+                          </h3>
+                          <p class="text-base">Create multiple tests and link them together. So, candidates can attempt multiple tests via a single link.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="w-full lg:w-1/3 px-4">
+                        <div class="max-w-xs mx-auto text-center">
+                          <div class="inline-flex mb-1 items-center justify-center w-12 h-12 bg-green-500 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                            </svg>
+                          </div>
+                          <h3 class="mb-3 text-xl md:text-2xl font-bold leading-8">Session Recordings, Plagiarism Check</h3>
+                          <p class="text-base">Every click, cursor movement, etc is recorded. Answers are compared to check for plagiarism.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-center justify-center gap-5 mt-4 md:flex-row xs:mt-6">
+                      <a href="https://equip.co/demo/assessments/8gogW/" target="_blank" class="inline-flex uppercase items-center py-2.5 px-9 text-xl font-semibold text-white border border-transparent rounded-full transition-all ease-in duration-200 hover:bg-opacity-50 bg-opacity-20 tracking-widest hover:underline btn-gradient">
+                        Try Demo
+                        <span class="ml-1.5">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                            </svg>
+                        </span>
+                      </a>
+                      <a href="https://equip.co/" target="_blank" class="inline-flex uppercase items-center py-2.5 text-xl font-semibold text-black bg-transparent hover:bg-gradient-to-r hover:from-purple-300 hover:to-pink-300 border-2 rounded-full px-9 transition-all ease-in duration-200 tracking-widest btn-border-gradient hover:underline">
+                        Start Hiring
+                        <span class="ml-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                              <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M9 5l7 7-7 7"
+                              />
+                            </svg>
+                        </span>
+                      </a>
+                    </div>
+                </section>
+              </div>
+      
+            </div>
+        </section>
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <footer class="font-family-ibm-plex bg-main-darkNavyBlue py-12 px-4 sm:px-6 lg:px-8 bottom-0 w-full mt-auto" style="box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.16);" aria-labelledby="footer-heading">
+
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-between gap-10 ">
+                    <div class="space-y-4 xl:col-span-1">
+                        <a href="logout.html#" class="flex items-center gap-x-3">
+                            <span class="sr-only">autoproctor</span>
+                            <img
+                                    class="w-48 h-auto"
+                                    src="../static/img/logo.png"
+                                    alt="Autoproctor logo"
+                            />
+                        </a>
+                        <p class="text-base text-white">© 2022, Socratease Inc. All rights reserved.</p>
+                    </div>
+                    <div class="max-w-md flex flex-wrap justify-between gap-4">
+                        <a href="../terms-service.html" class="text-white hover:underline">Terms and Conditions</a>
+                        <a href="../privacy-policy.html" class="text-white hover:underline">Privacy Policies and Cookies</a>
+                        <a href="https://autoproctor.freshdesk.com/" target="_blank" class="text-white hover:underline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
+
+    <script src="https://cdn.autoproctor.co/static/scripts/common-functions.js?v=s8g"></script>
+
+    <script>
+        var maxSentryEvents = 6;
+        var numberOfCurrentSentryEvents = 0;
+        const byPassedErrorsDict = [{ error: "privateSpecialRepair", reason: "Chrome mobile view error"},
+            { error: "Non-Error promise rejection captured with keys", reason: ""},
+            { error: "Non-Error promise rejection captured with value", reason: "https://forum.sentry.io/t/unhandledrejection-non-error-promise-rejection-captured-with-value/14062/12"},
+            { error: "getReadModeExtract", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected"},
+            { error: "getReadModeRender", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "getReadModeConfig", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "Identifier 'isMainframe' has already been declared", reason: "Not from our codebase" },
+            { error: "runCustomize is not defined", reason: "Not from our codebase" },
+            { error: "processRandomSelector is not defined", reason: "Not from our codebase" },
+            { error: "ResizeObserver loop limit", reason: "Can be ignored: https://stackoverflow.com/questions/49384120/resizeobserver-loop-limit-exceeded" }]
+        const errorArr = byPassedErrorsDict.map(function(ped) {  return ped.error; })
+        var serverErrorsRegex = new RegExp(errorArr.join("|"), "mi");
+
+        
+            Sentry.init({
+                dsn: "https://cac61d5e1fe04b01a6409048914ff88e@o288839.ingest.sentry.io/5911954",
+                beforeSend(event) {
+                    numberOfCurrentSentryEvents++;
+                    if (numberOfCurrentSentryEvents <= maxSentryEvents) {
+                        return event;
+                    } else {
+                        return null;
+                    }
+                },
+                tracesSampleRate: 1.0,
+                environment: "production",
+                ignoreErrors: [serverErrorsRegex],
+            });
+            
+        
+
+        
+
+            window.$crisp = [];
+            window.CRISP_WEBSITE_ID = "380ff461-e7c5-4a2d-8a24-36dd7d23b74d";
+            (function (){d = document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})
+            ();
+
+            
+                $crisp.push(["set", "session:data", [[["role", "user" ]]]]);
+            
+        
+
+        window.addEventListener("load", function () {
+            if (typeof $ === "undefined") {
+                alert("There was an error connecting to the internet. We will now try reloading the page.");
+                window.location.reload();
+                return;
+            }
+
+            $("#sidebar-collapsible").on('click', function () {
+                if (!$(this).hasClass("ques-container-active")) {
+                    $(this).addClass("ques-container-active");
+                    $(this).find('.sidebar-uncollapsible-icon').hide();
+                    $(this).find('.collapsible-body').show();
+                    $(this).find(".sidebar-collapsible-icon").show();
+                } else {
+                    $(this).find('.sidebar-collapsible-icon').hide();
+                    $(this).find('.collapsible-body').hide();
+                    $(this).find(".sidebar-uncollapsible-icon").show();
+                    $("#sidebar-collapsible").removeClass("ques-container-active");
+                }
+            });
+
+            $('body').click(function(e) {
+                if (!$(e.target).closest("#account-dropdown").length && !$(e.target).closest(".dropdown-trigger").length) {
+                    $("#account-dropdown").hide();
+                }
+            });
+
+            const $staticSidebarOverlay = $('#static-sidebar--overlay');
+            const $staticSidebarContainer = $('#static-sidebar--container');
+            const $staticSidebar = $('#static-sidebar');
+
+            function toggleStaticSidebarState(state) {
+                if (state === 'on') {
+                    $staticSidebar.show();
+                    $staticSidebarOverlay.removeClass('opacity-0');
+                    $staticSidebarOverlay.addClass('opacity-100');
+                    $staticSidebarContainer.removeClass('-translate-x-full');
+                    $staticSidebarContainer.addClass('translate-x-0');
+                } else {
+                    $staticSidebar.hide();
+                    $staticSidebarOverlay.removeClass('opacity-100');
+                    $staticSidebarOverlay.addClass('opacity-0');
+                    $staticSidebarContainer.removeClass('translate-x-0');
+                    $staticSidebarContainer.addClass('-translate-x-full');
+                }
+            }
+
+
+            $('#sidebar-trigger').click(function () {
+                if ($staticSidebarContainer.hasClass('-translate-x-full')) {
+                    toggleStaticSidebarState('on');
+                } else {
+                    toggleStaticSidebarState('off');
+                }
+            })
+
+            $staticSidebarOverlay.click(function() {
+                toggleStaticSidebarState('off');
+            })
+
+            
+
+
+            
+                
+            
+
+            const upgradePlanUrl = "/account/edit-profile";
+            const upgradePlanMsg = "This feature is available only for Premium Users. Click <a href='https://www.autoproctor.co/&quot;&#32;+&#32;upgradePlanUrl&#32;+&#32;&quot;' target='_blank'>here</a> to upgrade to a Premium Plan."
+
+            $('.upgrade-premium-feature').click(function () {
+                Swal.fire({
+                    type: "info",
+                    title: "Premium Feature",
+                    html: upgradePlanMsg,
+                });
+            });
+
+            let updatePolicyVersion, acceptNewTerms;
+            
+
+            let policyTitle, policyMsg;
+            const termsOfUseUrl = "/terms-service";
+            const privacyPolicyUrl =
+            "/privacy-policy"
+
+            if (updatePolicyVersion === true) {
+                policyTitle = "Updated Terms of Use and Privacy Policy";
+                policyMsg = "We have updated our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our new Policies.";
+            } else if (acceptNewTerms === true) {
+                policyTitle = "Terms of Use and Privacy Policy";
+                policyMsg = "These are our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our Policies.";
+            }
+
+            if (updatePolicyVersion === true || acceptNewTerms === true) {
+                Swal.fire({
+                    type: "info",
+                    title: policyTitle,
+                    html: policyMsg,
+                    allowOutsideClick: false
+                }).then((result) => {
+                    if (result.value) {
+                        const url = "/account/update-policy-version/";
+                        const ajaxParams = {headers: {'X-CSRF-Token': "ImVhMjczNjA3YTg0Y2IzMWNhMDg3YzRkODRiZDBiMDJiMjVjYzkzNzci.Y1DjGA.iNs6L-hFXTYdceoy4hDY8r93VkM"}};
+                        const successRedirectUrl = window.location;
+                        makePostRequest(url, {}, successRedirectUrl, ajaxParams);
+
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            if (typeof $ === "undefined") {
+                alert("There was an error connecting to the internet. We will now try reloading the page.");
+                window.location.reload();
+                return;
+            }
+            if (typeof Swiper !== "undefined") {
+                initSwiper();
+            } else {
+                $.getScript("https://unpkg.com/swiper/swiper-bundle.min.js")
+                .done(function(script, textStatus) {
+                    initSwiper();
+                })
+                .fail(function(jqxhr, settings, exception) {
+                });
+            }
+        })
+
+        function initSwiper() {
+            const swiper = new Swiper(".swiper-container", {
+                slidesPerView: 1,
+                direction: "horizontal",
+                loop: true,
+                allowTouchMove: true,
+                initialSlide: 0,
+                autoplay: {
+                    delay: 10000,
+                },
+                speed: 300,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            $(".swiper-container.ap-lp-hero__slider").hover(
+                function () {
+                    this.swiper.autoplay.stop();
+                },
+                function () {
+                    this.swiper.autoplay.start();
+                }
+            );
+        }
+    </script>
+
+</body>
+</html>

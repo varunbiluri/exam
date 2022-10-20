@@ -1,0 +1,817 @@
+
+
+    
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="shortcut icon" href="https://cdn.autoproctor.co/static/img/favicon.png"/>
+        
+            <script
+                    src="https://browser.sentry-cdn.com/5.17.0/bundle.min.js"
+                    integrity="sha384-lowBFC6YTkvMIWPORr7+TERnCkZdo5ab00oH5NkFLeQUAmBTLGwJpFjF6djuxJ/5"
+                    crossorigin="anonymous"
+            ></script>
+        
+        
+
+        <title>AutoProctor: Frequently Asked Questions </title>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+
+          
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.css"
+            rel="stylesheet"
+    />
+    
+        <link rel="stylesheet" href="https://cdn.autoproctor.co/static/style/main-style.min.css?v=2.2"/>
+    
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .soc-breadcrumb {
+                @apply hidden;
+            }
+
+            .test-admin-primary-sidebar {
+                @apply -mt-px;
+            }
+
+            audio, canvas, iframe, img, object, video {
+                display: unset !important;
+            }
+
+            .soc-main-layout {
+                font-family: "Roboto", serif !important;
+            }
+
+            .ap-login-btn {
+                @apply py-3 px-9;
+            }
+
+            .ap-lp-hero {
+                @apply p-0;
+            }
+
+            .ap-login-btn > span {
+                @apply ml-2.5;
+            }
+
+            .non-footer-content {
+                flex: 1 0 auto;
+            }
+
+
+        
+            #nav-logo {
+                left: 0;
+                /* margin-left: 152px; */
+            }
+        
+
+            .sidenav li > a:hover {
+                @apply bg-transparent;
+            }
+        }
+    </style>
+
+
+    
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                                (t[e] = function () {
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                                });
+                        }
+
+                        ((p = t.createElement("script")).type = "text/javascript"),
+                            (p.async = !0),
+                            (p.src = s.api_host + "/static/array.js"),
+                            (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(
+                                    " "
+                                ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("Asio7_Oj3Io9h2WMlLHxMHrsHdiMv_NdVF9WXKbVQUo", {api_host: "https://app.posthog.com"});
+            
+        </script>
+    
+
+    <script>
+        var gaIsAvailable = false;
+    </script>
+    
+        <script type="text/javascript">
+            gaIsAvailable = true;
+            var gaID = "UA-165591693-1";
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', gaID, 'auto');
+            
+            ga('send', 'pageview');
+        </script>
+
+    
+</head>
+
+<body class="flex min-h-screen flex-col">
+<div class="non-footer-content">
+    
+        
+            <div class="navbar-fixed fixed z-30 w-full px-4 lg:px-14 bg-gradient-to-r from-[#363FB5] to-[#00A36D] shadow-lg" id="navbar-container">
+                <nav class="relative py-2.5 max-w-7xl nav-content mx-auto">
+                    <div class="flex items-center justify-between flex-row">
+                        <div class="nav_left_half flex flex-row-reverse items-center justify-end w-full gap-4 md:w-auto">
+                            <a href="account/logout.html" class="flex items-center gap-x-3" id="nav-logo">
+                                <span class="sr-only">autoproctor</span>
+                                <img
+                                        class="w-auto h-6"
+                                        src="https://cdn.autoproctor.co/static/img/icons/ap-logo.svg"
+                                        alt=""
+                                />
+                                <span class="text-2xl text-white font-montserrat">AutoProctor</span>
+                            </a>
+                            
+
+                                <button
+                                        type="button"
+                                        class="flex items-center -mr-2 md:hidden sidenav-trigger inline-flex items-center justify-center p-2 text-white rounded-md hover:text-gray-200 focus:outline-none ph-no-capture"
+                                        id="sidebar-trigger"
+
+                                >
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg
+                                            class="w-6 h-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            aria-hidden="true"
+                                    >
+                                        <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2.5"
+                                                d="M4 6h16M4 12h16M4 18h16"
+                                        />
+                                    </svg>
+                                </button>
+
+                            
+                        </div>
+
+                        <div id="nav-right-half" class="items-center hidden gap-8 md:flex">
+                            <ul class="dropdown-content hidden absolute top-12 right-8 bg-white text-center text-emerald-600 shadow-lg rounded py-1.5 space-y-2" id="account-dropdown" style="min-width: 150px;z-index: 100;">
+                                
+                                <li><a class="hover:underline ph-no-capture" href="account/logout.html">Logout</a></li>
+                            </ul>
+
+                            <ul class="right flex items-center md:space-x-6">
+                                
+
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="pricing" href="pricing.html">Pricing</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a id="faqs" href="faqs.html">FAQs</a></li>
+                                    <li class="text-xl font-medium text-white hover:underline ph-no-capture"><a href="https://help.autoproctor.co/">Help</a></li>
+                                    
+                                        <li class="inline-flex">
+                                            <a
+                                                    href="account/login/index.html"
+                                                    class="inline-flex items-center py-2.5 text-lg font-medium text-white bg-white border border-transparent rounded-full bg-opacity-30 px-9 hover:bg-opacity-50 transition-all ease-in duration-200 font-roboto"
+                                            >
+                                                SIGN IN
+                                                <span class="ml-2">
+                                                <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="w-[18px] h-[18px]"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                        stroke-width="2.5"
+                                                >
+                                                <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M9 5l7 7-7 7"
+                                                />
+                                                </svg>
+                                            </span>
+                                            </a>
+                                        </li>
+                                    
+                                
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        
+
+        
+            
+    <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true" style="display: none" id="static-sidebar">
+        <div class="fixed inset-0 bg-gray-600 bg-opacity-75 opacity-0"  id="static-sidebar--overlay"  aria-hidden="true"></div>
+        <div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-200 -translate-x-full" id="static-sidebar--container">
+
+
+
+
+
+
+
+
+
+
+            <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                <nav class="px-4 mt-4 space-y-1 text-indigo-700 text-lg font-medium">
+                    
+
+                    
+
+
+                    <a href="https://help.autoproctor.co/how-to-add-timer-proctor-google-forms/" target="_blank" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        How it works
+                    </a>
+
+                    <a href="pricing.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        Pricing
+                    </a>
+
+                    <a href="faqs.html" class="group flex items-center px-3 py-3 rounded-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        FAQs
+                    </a>
+
+                    <a href="https://help.autoproctor.co/" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        Support
+                    </a>
+
+                    
+                        <a href="account/login/index.html" class="group flex items-center px-3 py-3 rounded-md mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg>
+                            Login
+                        </a>
+                    
+                </nav>
+            </div>
+        </div>
+
+        <div class="flex-shrink-0 w-14" aria-hidden="true">
+            <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+    </div>
+
+        
+    
+
+    <div class="page-container">
+        <div class="content">
+            
+    <div class="max-w-full w-full">
+        <div
+                class="h-40 lg:h-48 m-0 pt-14 flex justify-center items-center bg-gradient-to-r from-[#515ACB] to-[#4DF8AD]"
+        >
+            <div
+                    class="-tracking-tight lg:w-full w-11/12 lg:max-w-full font-family-ibm-plex font-bold text-3xl sm:text-4xl lg:text-5xl text-center text-white"
+            >
+                Frequently Asked Questions
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto py-4 mb-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+                <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What is AutoProctor? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">AutoProctor is an automated proctoring solution for online tests. As users take tests, we monitor the user’s environment and actions real-time to determine malpractice. We can communicate this to the test taker to prevent further occurrences. We can also record evidence of these incidents so that you can review them later.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> How does AutoProctor determine these violations? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">AutoProctor employs a variety of methods for this. While we obviously do not want to reveal our exact algorithms, we take as input the audio and video feed of the user, whether the user is switching away from the test to a different tab/application, etc.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What does AutoProctor do with these violations? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">At the end of the test, our proprietary AI engine calculates a trust score based on all the evidence gathered. This trust score factors in the frequency and duration of these violations. The AI engine uses the data of the many previous test-takers to distinguish between an actual malpractice and a test-taker who inadvertently triggered a violation.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> How do I know that AutoProctor is doing a fair job of assessing the violations? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">While our actual algorithms are proprietary, we will share the evidence we have gathered with you. For example, if AutoProctor detects multiple people on the screen, it will take a photo of this violation. You can then view this photo on your dashboard.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What other features does AutoProctor have? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Apart from proctoring, AutoProctor also has a Timer feature. You can set the duration of the test, after which the user cannot submit any more answers. You can also set a Start Time, before which the test isn’t accessible. Similarly, you can set an End Time, after which the test isn’t accessible.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What do I need to start using AutoProctor? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">The core offering of AutoProctor is the proctoring solution. The easiest way to use AutoProctor would be to install it as an add-on to Google Forms. You can then create the questions on Google Forms, and share a link with the test-takers.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What if I have my own test-taking software? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">If you use a software or LMS that isn’t Google Forms, we will have to do a custom integration with your site. Reach out to us at hello@autoproctor.co and we can help you set up the integration.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> How do I get my users to take the test? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Once you install the add-on on Google Forms, AutoProctor will generate a unique link for each test. You just have to share this link with your users. Once they click on the link, the test and the proctoring will both start together.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What are the minimum requirements for a test-taker to take the test? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">This depends on how you have configured the test. For example, if you have enabled video tracking, the user must have a camera on the device. If there is audio tracking, there must be a mic. Of course, the user must be connected to the internet for the test and the proctoring to work.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What happens during the test? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">It is best to experience the test environment for yourself. So, we highly recommend that you take the demo test. But, basically, the test proceeds as it usually does. If the timer is enabled, the user sees the timer. In the background, AutoProctor monitors the environment and the actions. Depending on how you have configured the test, detected violations are communicated to the user. Similarly, depending on your configuration, evidence of these violations are recorded so that you can review them later.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> I see a blank screen, or it says docs.google.com refused to connect, or I cannot click on any option the test. Why? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Most likely, this is because of an issue with your login. You are logged in with a Google account that doesn't allow you access to the test. Read these instructions for a Timed Test, and these instructions for a Proctored Test. Scroll down the section that says Google Accounts.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> The test doesn't load. It gets stuck at the Setting Up screen on Step 6/8 or step 7/8. </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">As we mention in our instructions on taking Proctored Tests, AutoProctor uses quite modern technologies to detect and analyse anomalies. This requires modern browsers. It also requires the device hardware to have high enough specifications. While we cannot list all the specifications required, the easiest way to check if your device support AutoProctor is by taking the demo test. If the test doesn't load despite you following all the instructions, it means that your device isn't supported, and you will need a higher-end device.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> The test loads fine, but it is very slow or laggy. </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Similar to the question above, if the test loads fine but it is very laggy or slow, it just means that your device doesn't have good enough hardware to run AutoProctor. Your device may be running Facebook and YouTube perfectly well, but remember that AutoProctor is capturing video from your device and running Artificial Intelligence algorithms on it. So, it requires much more processing power. <br><br>You can try closing all other apps on your device, and rebooting your device just before you take the test. But, if you still cannot run the test, unfortunately there is nothing we can do about it :(</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> Why are there two Submit buttons? Why can't you automatically Submit the answers? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">Yes, ideally we would have liked to have a single Submit button too. But, that is currently impossible due to the way Google Forms works. AutoProctor just loads your Google Form on its own site. Even though Google Form is loaded on the AutoProctor site, Google doesn't give us permissions to know whether the user has submitted the Form or not. <br><br>So, if a user clicks the Submit button on the AutoProctor site, it is impossible for us to know that the answers have been submitted. Which is why we have two Submit buttons: The Purple button is to let Google know that the answers have been submitted. The Green button is to let AutoProctor know that the test has been completed.<br><br>This is also the reason we cannot automatically submit the answers when the time is up. Google doesn't allow us to submit the answers on the user's behalf. So, until Google changes its permissions, there is nothing we can do!</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What about Privacy Issues? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">We are mindful that because AutoProctor is accessing video and audio feeds of the user, Privacy is a big concern. By default, these data are stored on the cloud and only the test administrator can access these data, via a unique URL. After having reviewed the data, the administrator can choose to delete them, which will permanently erase all the files from our cloud storage.</p>
+                        </dd>
+                    </div>
+                    
+                    <div class="pt-6 faq-container">
+                        <dt class="text-lg">
+                            <button type="button" class="text-left w-full flex justify-between items-start text-gray-400">
+                                <span class="font-medium text-gray-900"> What if I want the files to be hosted on my own cloud storage? </span>
+                                <span class="ml-6 h-7 flex items-center">
+                                    <svg class="rotate-0 h-6 w-6 transform chevron-container" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </dt>
+                        <dd class="mt-2 pr-12 hidden faq-ans">
+                            <p class="text-base text-gray-500">We can work with you if you want the files to be on your own storage. This will require custom integration.</p>
+                        </dd>
+                    </div>
+                    
+
+                </dl>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+        <footer class="font-family-ibm-plex bg-main-darkNavyBlue py-12 px-4 sm:px-6 lg:px-8 bottom-0 w-full mt-auto" style="box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.16);" aria-labelledby="footer-heading">
+
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-between gap-10 ">
+                    <div class="space-y-4 xl:col-span-1">
+                        <a href="faqs.html#" class="flex items-center gap-x-3">
+                            <span class="sr-only">autoproctor</span>
+                            <img
+                                    class="w-48 h-auto"
+                                    src="static/img/logo.png"
+                                    alt="Autoproctor logo"
+                            />
+                        </a>
+                        <p class="text-base text-white">© 2022, Socratease Inc. All rights reserved.</p>
+                    </div>
+                    <div class="max-w-md flex flex-wrap justify-between gap-4">
+                        <a href="terms-service.html" class="text-white hover:underline">Terms and Conditions</a>
+                        <a href="privacy-policy.html" class="text-white hover:underline">Privacy Policies and Cookies</a>
+                        <a href="https://autoproctor.freshdesk.com/" target="_blank" class="text-white hover:underline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    
+
+
+
+
+
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
+
+    <script src="https://cdn.autoproctor.co/static/scripts/common-functions.js?v=s8g"></script>
+
+    <script>
+        var maxSentryEvents = 6;
+        var numberOfCurrentSentryEvents = 0;
+        const byPassedErrorsDict = [{ error: "privateSpecialRepair", reason: "Chrome mobile view error"},
+            { error: "Non-Error promise rejection captured with keys", reason: ""},
+            { error: "Non-Error promise rejection captured with value", reason: "https://forum.sentry.io/t/unhandledrejection-non-error-promise-rejection-captured-with-value/14062/12"},
+            { error: "getReadModeExtract", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected"},
+            { error: "getReadModeRender", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "getReadModeConfig", reason: "Occurred in HeyTap browser (in Oppo) | 85% Oppo users affected" },
+            { error: "Identifier 'isMainframe' has already been declared", reason: "Not from our codebase" },
+            { error: "runCustomize is not defined", reason: "Not from our codebase" },
+            { error: "processRandomSelector is not defined", reason: "Not from our codebase" },
+            { error: "ResizeObserver loop limit", reason: "Can be ignored: https://stackoverflow.com/questions/49384120/resizeobserver-loop-limit-exceeded" }]
+        const errorArr = byPassedErrorsDict.map(function(ped) {  return ped.error; })
+        var serverErrorsRegex = new RegExp(errorArr.join("|"), "mi");
+
+        
+            Sentry.init({
+                dsn: "https://cac61d5e1fe04b01a6409048914ff88e@o288839.ingest.sentry.io/5911954",
+                beforeSend(event) {
+                    numberOfCurrentSentryEvents++;
+                    if (numberOfCurrentSentryEvents <= maxSentryEvents) {
+                        return event;
+                    } else {
+                        return null;
+                    }
+                },
+                tracesSampleRate: 1.0,
+                environment: "production",
+                ignoreErrors: [serverErrorsRegex],
+            });
+            
+        
+
+        
+
+            window.$crisp = [];
+            window.CRISP_WEBSITE_ID = "380ff461-e7c5-4a2d-8a24-36dd7d23b74d";
+            (function (){d = document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})
+            ();
+
+            
+                $crisp.push(["set", "session:data", [[["role", "user" ]]]]);
+            
+        
+
+        window.addEventListener("load", function () {
+            if (typeof $ === "undefined") {
+                alert("There was an error connecting to the internet. We will now try reloading the page.");
+                window.location.reload();
+                return;
+            }
+
+            $("#sidebar-collapsible").on('click', function () {
+                if (!$(this).hasClass("ques-container-active")) {
+                    $(this).addClass("ques-container-active");
+                    $(this).find('.sidebar-uncollapsible-icon').hide();
+                    $(this).find('.collapsible-body').show();
+                    $(this).find(".sidebar-collapsible-icon").show();
+                } else {
+                    $(this).find('.sidebar-collapsible-icon').hide();
+                    $(this).find('.collapsible-body').hide();
+                    $(this).find(".sidebar-uncollapsible-icon").show();
+                    $("#sidebar-collapsible").removeClass("ques-container-active");
+                }
+            });
+
+            $('body').click(function(e) {
+                if (!$(e.target).closest("#account-dropdown").length && !$(e.target).closest(".dropdown-trigger").length) {
+                    $("#account-dropdown").hide();
+                }
+            });
+
+            const $staticSidebarOverlay = $('#static-sidebar--overlay');
+            const $staticSidebarContainer = $('#static-sidebar--container');
+            const $staticSidebar = $('#static-sidebar');
+
+            function toggleStaticSidebarState(state) {
+                if (state === 'on') {
+                    $staticSidebar.show();
+                    $staticSidebarOverlay.removeClass('opacity-0');
+                    $staticSidebarOverlay.addClass('opacity-100');
+                    $staticSidebarContainer.removeClass('-translate-x-full');
+                    $staticSidebarContainer.addClass('translate-x-0');
+                } else {
+                    $staticSidebar.hide();
+                    $staticSidebarOverlay.removeClass('opacity-100');
+                    $staticSidebarOverlay.addClass('opacity-0');
+                    $staticSidebarContainer.removeClass('translate-x-0');
+                    $staticSidebarContainer.addClass('-translate-x-full');
+                }
+            }
+
+
+            $('#sidebar-trigger').click(function () {
+                if ($staticSidebarContainer.hasClass('-translate-x-full')) {
+                    toggleStaticSidebarState('on');
+                } else {
+                    toggleStaticSidebarState('off');
+                }
+            })
+
+            $staticSidebarOverlay.click(function() {
+                toggleStaticSidebarState('off');
+            })
+
+            
+
+
+            
+                
+            
+
+            const upgradePlanUrl = "/account/edit-profile";
+            const upgradePlanMsg = "This feature is available only for Premium Users. Click <a href='https://www.autoproctor.co/&quot;&#32;+&#32;upgradePlanUrl&#32;+&#32;&quot;' target='_blank'>here</a> to upgrade to a Premium Plan."
+
+            $('.upgrade-premium-feature').click(function () {
+                Swal.fire({
+                    type: "info",
+                    title: "Premium Feature",
+                    html: upgradePlanMsg,
+                });
+            });
+
+            let updatePolicyVersion, acceptNewTerms;
+            
+
+            let policyTitle, policyMsg;
+            const termsOfUseUrl = "/terms-service";
+            const privacyPolicyUrl =
+            "/privacy-policy"
+
+            if (updatePolicyVersion === true) {
+                policyTitle = "Updated Terms of Use and Privacy Policy";
+                policyMsg = "We have updated our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our new Policies.";
+            } else if (acceptNewTerms === true) {
+                policyTitle = "Terms of Use and Privacy Policy";
+                policyMsg = "These are our <a href='https://www.autoproctor.co/&quot;&#32;+&#32;termsOfUseUrl&#32;+&#32;&quot;' target='_blank'> Terms of Use</a> and <a href='https://www.autoproctor.co/&quot;&#32;+&#32;privacyPolicyUrl&#32;+&#32;&quot;' target='_blank'> Privacy Policy</a>. By clicking OK, you are agreeing to our Policies.";
+            }
+
+            if (updatePolicyVersion === true || acceptNewTerms === true) {
+                Swal.fire({
+                    type: "info",
+                    title: policyTitle,
+                    html: policyMsg,
+                    allowOutsideClick: false
+                }).then((result) => {
+                    if (result.value) {
+                        const url = "/account/update-policy-version/";
+                        const ajaxParams = {headers: {'X-CSRF-Token': "ImVhMjczNjA3YTg0Y2IzMWNhMDg3YzRkODRiZDBiMDJiMjVjYzkzNzci.Y1DjGA.iNs6L-hFXTYdceoy4hDY8r93VkM"}};
+                        const successRedirectUrl = window.location;
+                        makePostRequest(url, {}, successRedirectUrl, ajaxParams);
+
+                    }
+                });
+            }
+        });
+
+    </script>
+
+
+
+    <script>
+        window.addEventListener('load', function() {
+
+        })
+
+    </script>
+
+</body>
+</html>
